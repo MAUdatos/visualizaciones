@@ -35,7 +35,7 @@ df_expectativas = df_expectativas.dropna(how = 'all')
 #st.title("Movimiento de Agroecología Urbana - MAU")
 col_x, col_y = st.columns(2)
 col_x.image("logo_mau.png", width= 200)
-col_y.header("Red de cooperación mutua que fomenta, reivindiqua, y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
+col_y.header("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 
 tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 
