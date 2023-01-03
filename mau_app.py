@@ -110,10 +110,10 @@ else:
 
 fig = px.sunburst(
     data_frame = df_foda_s,
-    path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción']
+    path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],
     values = None
 )
-      
+  
 st.plotly_chart(fig)
 
 st.markdown("""---""")
