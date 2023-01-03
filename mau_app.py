@@ -102,21 +102,15 @@ df_foda_s = df_foda.query('Tipo == @foda_s')
 df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
 df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
 
+fig = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)
+
 if  len(foda_s) == 0:
     st.markdown('Resultados:')
     st.caption('🥕 No hay información seleccionada')
-else:
+else:  
+    st.plotly_chart(fig)
     st.table(df_foda_summary)
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
-
-fig = px.sunburst(
-    data_frame = df_foda_s,
-    path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],
-    values = None
-)
-  
-st.plotly_chart(fig)
-
 st.markdown("""---""")
 
 st.subheader("🌽 Análisis de sistematización y mapeo")
