@@ -43,6 +43,7 @@ with tab1:
    st.markdown(""" """)
    st.markdown(""" """)
    st.markdown(""" """)
+   st.markdown(""" """)
 with tab2:
    st.markdown("- Generar redes de apoyo para potenciar el intercambio de saberes, experiencias y recursos entre organizaciones y territorios urbanos, \
                 periurbanos y rurales")
