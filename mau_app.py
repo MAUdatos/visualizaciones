@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import plotly.express as px
+import plotly.express as px
 import plotly.graph_objs as go
 
 #Dashboard structure
@@ -107,22 +107,14 @@ if  len(foda_s) == 0:
 else:
     st.table(df_foda_summary)
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
-            
-trace = go.Sunburst(
-    labels = df_foda_s['Tipo'],
-    cats   = df_foda_s['Clasificación Agrupada'],
-    #values=[  'descripción',  12,     10,     2,      6,      6,      4,       4],
-    #branchvalues="total",
-    outsidetextfont = {"size": 20, "color": "#377eb8"},
-    marker = {"line": {"width": 2}},
-)
 
-layout = go.Layout(margin = go.layout.Margin(t=0, l=0, r=0, b=0)
+fig = px.sunburst(
+    data_frame = df_foda_s,
+    path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción']
+    values = None
 )
-
-figure = {'data': [trace],'layout': layout}
-            
-st.plotly_chart(figure)
+      
+st.plotly_chart(fig)
 
 st.markdown("""---""")
 
