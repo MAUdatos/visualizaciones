@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
+#import plotly.express as px
+import plotly.graph_objs as go
 
 #Dashboard structure
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
@@ -124,9 +125,6 @@ figure = {
     'data': [trace],
     'layout': layout
 }
-            
-#data = dict(df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
-#fig = px.sunburst(data, df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
             
 st.plotly_chart(figure)
 
