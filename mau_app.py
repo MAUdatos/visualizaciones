@@ -38,11 +38,8 @@ col_y.header("Red de cooperación mutua que fomenta, reivindica y defiende el of
 tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 
 with tab1:
-   st.markdown("""
-       - Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria (MAU 3/12/2022)
-       \n \n
-       """)
-
+   st.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria (MAU 3/12/2022)       """)
+   st.markdown("")**2
 with tab2:
    st.markdown("- Generar redes de apoyo para potenciar el intercambio de saberes, experiencias y recursos entre organizaciones y territorios urbanos, \
                 periurbanos y rurales")
