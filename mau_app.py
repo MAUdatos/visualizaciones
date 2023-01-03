@@ -1,12 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 #Dashboard structure
-st.set_page_config(
-    page_title="MAU ",
-    page_icon="🍃",
-    layout="wide")
+st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
 
 #Hide index when showing a table
 # CSS to inject contained in a string
@@ -76,14 +74,11 @@ st.header('🌻 Análisis 2do Encuentro MAU (3/12/2022)') #
 st.subheader('Expectativas')
 
 st.markdown('Análisis de respuestas a pregunta *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros.*"')
-expectativas_s = st.multiselect(
-    "Selecciona tematica",
-    options=df_expectativas["Indicador"].unique(),)
+expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas["Indicador"].unique(),)
 
 df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
 
-df_expectativas_s.rename(columns = {
-'Indicador':'Dimensión',}, inplace = True)
+df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
@@ -92,15 +87,13 @@ else:
     st.table(df_expectativas_s)
     st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
-###FODA
+### Análisis FODA
 
 st.subheader('Análisis FODA')
 st.markdown('El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
-espacios que forman el MAU. Para ello se consideraron cuatro marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.')
+espacios que forman el MAU. Para ello se consideraron 4 marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.')
 
-foda_s = st.multiselect(
-    "Selecciona marco de análisis",
-    options=df_foda["Tipo"].unique(),)
+foda_s = st.multiselect("Selecciona marco de análisis", options=df_foda["Tipo"].unique(),)
 
 df_foda_s = df_foda.query('Tipo == @foda_s')
 
@@ -114,7 +107,7 @@ else:
     st.table(df_foda_summary)
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
 
-st.markdown("""---""")
+#st.markdown("""---""")
 
 st.subheader("🌽 Análisis de sistematización y mapeo")
 
@@ -151,8 +144,7 @@ df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_rep
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
                                   'Nombre_representante'                         :'Nombre persona representante',
                                   'Mail Colectivo / Organización o mail personal':'Email',
-                                  'Link redes sociales'                          :'Instagram',}, 
-                       inplace = True)
+                                  'Link redes sociales'                          :'Instagram',},  inplace = True)
 
 if  len(Territorio) == 0:
     st.markdown('Resultados')
