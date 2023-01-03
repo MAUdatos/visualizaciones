@@ -83,13 +83,15 @@ df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
 
 df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
+df = pd.DataFrame(
+
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
 
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
     st.caption(' 🥕 No hay información seleccionada')
 else:   
-    st.plotly_chart(fig1)
+    st.plotly_chart(fig1)   #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus hover
     st.table(df_expectativas_s)
     st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
