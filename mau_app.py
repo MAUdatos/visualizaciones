@@ -85,6 +85,7 @@ if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
     st.caption(' 🥕 No hay información seleccionada')
 else:
+    fig = px.sunburst(data_frame = df_foda_s, mpath = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)          
     st.table(df_expectativas_s)
     st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
