@@ -83,8 +83,6 @@ df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
 
 df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
-df = pd.DataFrame(
-
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
 
 if  len(expectativas_s) == 0:
