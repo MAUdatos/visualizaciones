@@ -96,7 +96,8 @@ else:
 ###FODA
 
 st.subheader('Análisis FODA')
-st.markdown('El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes espacios que forman el MAU. Para ello se consideraron cuatro marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades')
+st.markdown('El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
+espacios que forman el MAU. Para ello se consideraron cuatro marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.')
 
 foda_s = st.multiselect(
     "Selecciona marco de análisis",
