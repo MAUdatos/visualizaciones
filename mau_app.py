@@ -110,7 +110,7 @@ else:
             
 trace = go.Sunburst(
     labels = df_foda_summary[0],
-    cats   = df_foda_summary[3]
+    cats   = df_foda_summary[3],
     #values=[  'descripción',  12,     10,     2,      6,      6,      4,       4],
     #branchvalues="total",
     outsidetextfont = {"size": 20, "color": "#377eb8"},
