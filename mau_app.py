@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-import plotly.graph_objs as go
 
 #Dashboard structure
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
@@ -85,7 +84,7 @@ df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
 df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
 layout = go.Layout(hovermode=False)
-fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None, layout=layout)  
+fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
 
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
@@ -109,7 +108,7 @@ df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica
 df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
 
 layout = go.Layout(hovermode=False)
-fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None, layout=layout)  
+fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
 
 if  len(foda_s) == 0:
     st.markdown('Resultados:')
