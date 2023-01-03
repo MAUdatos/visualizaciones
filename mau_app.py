@@ -106,8 +106,13 @@ if  len(foda_s) == 0:
 else:
     st.table(df_foda_summary)
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
+            
+data = dict(df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
+fig = px.sunburst(data, df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
+            
+st.plotly_chart(fig)
 
-#st.markdown("""---""")
+st.markdown("""---""")
 
 st.subheader("🌽 Análisis de sistematización y mapeo")
 
