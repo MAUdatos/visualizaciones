@@ -89,6 +89,7 @@ if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
     st.caption(' 🥕 No hay información seleccionada')
 else:   
+    st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés')
     st.plotly_chart(fig1)   #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus hover
     with st.expander("Ver detalle"):
             st.table(df_expectativas_s)
@@ -112,7 +113,8 @@ fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupa
 if  len(foda_s) == 0:
     st.markdown('Resultados:')
     st.caption('🥕 No hay información seleccionada')
-else:  
+else:
+    st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés')
     st.plotly_chart(fig2)
     with st.expander("Ver detalle"):
             st.table(df_foda_summary)
