@@ -84,8 +84,7 @@ df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
     st.caption(' 🥕 No hay información seleccionada')
-else:
-    fig = px.sunburst(data_frame = df_foda_s, mpath = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)          
+else:   
     st.table(df_expectativas_s)
     st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
@@ -102,7 +101,7 @@ df_foda_s = df_foda.query('Tipo == @foda_s')
 df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
 df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
 
-fig = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)
+fig = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
 
 if  len(foda_s) == 0:
     st.markdown('Resultados:')
