@@ -111,7 +111,7 @@ else:
 trace = go.Sunburst(
     labels=[ "Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
     parents=["",    "Eve",  "Eve",  "Seth", "Seth", "Eve",  "Eve",  "Awan",  "Eve" ],
-    values=[  65,    14,     12,     10,     2,      6,      6,      4,       4],
+    #values=[  65,    14,     12,     10,     2,      6,      6,      4,       4],
     branchvalues="total",
     outsidetextfont = {"size": 20, "color": "#377eb8"},
     marker = {"line": {"width": 2}},
