@@ -106,7 +106,6 @@ df_foda_s = df_foda.query('Tipo == @foda_s')
 df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
 df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
 
-layout = go.Layout(hovermode=False)
 fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
 
 if  len(foda_s) == 0:
