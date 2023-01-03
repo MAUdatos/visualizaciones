@@ -81,10 +81,13 @@ df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
 
 df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
+fig1 = px.sunburst(data_frame = df_expectativas_s,path = ['Dimensión', 'Expectativa',values = None)  
+
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
     st.caption(' 🥕 No hay información seleccionada')
 else:   
+    st.plotly_chart(fig1)
     st.table(df_expectativas_s)
     st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
@@ -101,13 +104,13 @@ df_foda_s = df_foda.query('Tipo == @foda_s')
 df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
 df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
 
-fig = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
+fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
 
 if  len(foda_s) == 0:
     st.markdown('Resultados:')
     st.caption('🥕 No hay información seleccionada')
 else:  
-    st.plotly_chart(fig)
+    st.plotly_chart(fig2)
     st.table(df_foda_summary)
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
 st.markdown("""---""")
