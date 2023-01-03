@@ -60,11 +60,11 @@ total_localidad   = df_bbdd['Localidad'].nunique()
 
 left_column, middle_column, right_column, empty_column = st.columns(4)
 with left_column:
-    st.metric("Nº de Organizaciones, Huertas y/o Comunidades",total_members)
+    st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 with middle_column:
-    st.metric("Nº de Personas representantes",total_individuals)
+    st.metric("Nº Personas representantes",total_individuals)
 with right_column:
-    st.metric("Nº de Territorios identificados",total_localidad)
+    st.metric("Nº Territorios identificados",total_localidad)
 
 st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
 
@@ -160,10 +160,10 @@ if  len(Territorio) == 0:
 else:
     left_column, middle_column, right_column, empty_column = st.columns(4)
     with left_column:
-        st.metric("Nº de Organizaciones, Huertas y/o Comunidades",total_members_f)
+        st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members_f)
     with middle_column:
-        st.metric("Nº de Personas representantes",total_individuals_f)
+        st.metric("Nº Personas representantes",total_individuals_f)
     with right_column:
-        st.metric("Nº de Territorios identificados",total_localidad_f)
+        st.metric("Nº Territorios identificados",total_localidad_f)
     st.table(df_bbdd_summary)
     st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
