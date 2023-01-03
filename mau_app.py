@@ -109,22 +109,18 @@ else:
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
             
 trace = go.Sunburst(
-    labels=[ "Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
-    parents=["Eve",  "Seth", "Seth", "Eve",  "Eve",  "Awan",  "Eve" ],
-    values=[  'descripción',  12,     10,     2,      6,      6,      4,       4],
-    branchvalues="total",
+    labels = df_foda_summary[0],
+    cats   = df_foda_summary[3]
+    #values=[  'descripción',  12,     10,     2,      6,      6,      4,       4],
+    #branchvalues="total",
     outsidetextfont = {"size": 20, "color": "#377eb8"},
     marker = {"line": {"width": 2}},
 )
 
-layout = go.Layout(
-    margin = go.layout.Margin(t=0, l=0, r=0, b=0)
+layout = go.Layout(margin = go.layout.Margin(t=0, l=0, r=0, b=0)
 )
 
-figure = {
-    'data': [trace],
-    'layout': layout
-}
+figure = {'data': [trace],'layout': layout}
             
 st.plotly_chart(figure)
 
