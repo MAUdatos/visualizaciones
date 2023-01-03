@@ -109,8 +109,8 @@ else:
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
             
 trace = go.Sunburst(
-    labels = df_foda_summary[0],
-    cats   = df_foda_summary[3],
+    labels = df_foda_s['Tipo'],
+    cats   = df_foda_s['Clasificación Agrupada'],
     #values=[  'descripción',  12,     10,     2,      6,      6,      4,       4],
     #branchvalues="total",
     outsidetextfont = {"size": 20, "color": "#377eb8"},
