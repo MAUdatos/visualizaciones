@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-import plotly.graph_objs as go
 
 #Dashboard structure
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
@@ -84,10 +83,7 @@ df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
 
 df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
-layout = go.Layout(hovermode=False)
-
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
-fig1 = go.Figure(data=data, layout=layout)
 
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
@@ -132,11 +128,7 @@ if all_options:
 
 df_bbdd_by_ter = df_bbdd.query('Localidad == @Territorio')
 
-miembros = st.multiselect(
-    "Organización, Huerta o Colectivo",
-    options=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique(),
-    default=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique()
-)
+miembros = st.multiselect("Organización, Huerta o Colectivo",options=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique(),default=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique())
 all_options = st.checkbox("Todas")
 
 if all_options:
