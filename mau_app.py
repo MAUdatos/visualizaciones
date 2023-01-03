@@ -140,7 +140,6 @@ if all_options:
 
 df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
 
-
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
 total_individuals_f = df_bbdd_filtered['Nombre_representante'].nunique()
@@ -159,7 +158,7 @@ if  len(Territorio) == 0:
     st.markdown('Resultados')
     st.caption('🥕 No hay información seleccionada')
 else:
-    left_column, middle_column, right_column = st.columns(3)
+    left_column, middle_column, right_column, empty_column = st.columns(4)
     with left_column:
         st.metric("Nº de Organizaciones, Huertas y/o Comunidades",total_members_f)
     with middle_column:
