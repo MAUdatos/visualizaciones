@@ -87,7 +87,7 @@ df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 layout = go.Layout(hovermode=False)
 
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
-fig1 = go.fig1(data=data, layout=layout)
+fig1 = go.Figure(data=data, layout=layout)
 
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
