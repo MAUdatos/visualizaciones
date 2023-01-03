@@ -107,10 +107,28 @@ else:
     st.table(df_foda_summary)
     st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
             
-data = dict(df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
-fig = px.sunburst(data, df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
+trace = go.Sunburst(
+    labels=[ "Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+    parents=["",    "Eve",  "Eve",  "Seth", "Seth", "Eve",  "Eve",  "Awan",  "Eve" ],
+    values=[  65,    14,     12,     10,     2,      6,      6,      4,       4],
+    branchvalues="total",
+    outsidetextfont = {"size": 20, "color": "#377eb8"},
+    marker = {"line": {"width": 2}},
+)
+
+layout = go.Layout(
+    margin = go.layout.Margin(t=0, l=0, r=0, b=0)
+)
+
+figure = {
+    'data': [trace],
+    'layout': layout
+}
             
-st.plotly_chart(fig)
+#data = dict(df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
+#fig = px.sunburst(data, df_foda_summary[0], df_foda_summary[3], df_foda_summary[2], df_foda_summary[1])
+            
+st.plotly_chart(figure)
 
 st.markdown("""---""")
 
