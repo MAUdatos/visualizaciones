@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly.graph_objs as go
 
 #Dashboard structure
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
@@ -84,7 +85,9 @@ df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
 df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
 layout = go.Layout(hovermode=False)
+
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
+fig1 = go.fig1(data=data, layout=layout)
 
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
