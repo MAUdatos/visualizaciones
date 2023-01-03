@@ -122,9 +122,7 @@ st.markdown("""---""")
 
 st.subheader("🌽 Análisis de sistematización y mapeo")
 
-Territorio = st.multiselect(
-    "Territorio",
-    options=df_bbdd["Localidad"].unique(),)
+Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
 all_options = st.checkbox("Todos los territorios")
 
 if all_options:
