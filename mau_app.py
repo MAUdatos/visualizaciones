@@ -90,8 +90,9 @@ if  len(expectativas_s) == 0:
     st.caption(' 🥕 No hay información seleccionada')
 else:   
     st.plotly_chart(fig1)   #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus hover
-    st.table(df_expectativas_s)
-    st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
+    with st.expander("Ver datalle"):
+            st.table(df_expectativas_s)
+            st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
 ### Análisis FODA
 
