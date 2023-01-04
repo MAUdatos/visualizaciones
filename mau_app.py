@@ -81,7 +81,11 @@ st.markdown('Análisis de respuestas a preguntas: *"¿Cuáles serían los objeti
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
                                     options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
                                     #default=df_expectativas["Fuente"].unique())
+all_options = st.checkbox("Ambos encuentros")
 
+if all_options:
+    fuente_expectativa = df_expectativas["Fuente"].unique().tolist()
+            
 df_expectativas_fuente = df_expectativas.query('Fuente == @fuente_expectativa')  #Filter by source of information
 
 expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas_fuente["Dimensión"].unique(),)
