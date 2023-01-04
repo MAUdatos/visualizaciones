@@ -155,7 +155,7 @@ df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'              
 #st.table(df_bbdd_summary_tree.groupby(["Nombre Organización, Huerta y/o Colectivo", "Localidad"])["Nombre persona representante"].count()
                                               
                                                           
-fig3 = px.treemap()
+#fig3 = px.treemap()
 
 
 if  len(Territorio) == 0:
