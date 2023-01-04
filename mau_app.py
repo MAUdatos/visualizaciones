@@ -91,7 +91,6 @@ else:
     st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')    
     st.plotly_chart(fig1)                 #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus avoid hover
     with st.expander("Ver detalle"):
-            df_expectativas_s = df_expectativas_s.groupby('Dimensión).apply(lambda x:x)
             st.table(df_expectativas_s)
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
