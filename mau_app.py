@@ -4,7 +4,7 @@ import numpy as np
 import plotly.express as px
 
 #Dashboard structure
-st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
+st.set_page_config(page_title="MAU ", page_icon="🍃", layout="centered")
 
 #Hide index when showing a table
 # CSS to inject contained in a string
