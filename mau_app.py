@@ -80,9 +80,9 @@ st.markdown('Análisis de respuestas a pregunta *"¿Qué esperas de una articula
 expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas["Indicador"].unique(),)
 
 df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
-df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
+#df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
 
-fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
+fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión','Indicador','Expectativa'],values = None)  
 
 if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
