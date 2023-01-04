@@ -92,6 +92,7 @@ else:
     st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')    
     st.plotly_chart(fig1)                 #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus avoid hover
     with st.expander("Ver detalle"):
+            df_expectativas_s = df_expectativas_s.groupby('Dimensión, group_keys = True').apply(lambda x:x)
             st.table(df_expectativas_s)
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
@@ -152,7 +153,7 @@ df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'              
                                   'Mail Colectivo / Organización o mail personal':'Email',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
 #treemap
-#df_bbdd_summary_tree = df_bbdd_summary.groupby('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
+#df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
 #st.table(df_bbdd_summary_tree)
 
 fig3 = px.treemap()
