@@ -80,11 +80,11 @@ st.markdown('Análisis de respuestas a pregunta *"¿Qué esperas de una articula
 
 fuente_expectativa = st.multiselect("Selecciona fuente de información", options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
 
-df_expectativas_fuente = df_expectativas.query('Dimensión == @fuente_expectativa')
+df_expectativas_fuente = df_expectativas.query('Fuente == @fuente_expectativa')
 
 expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas_fuente["Dimensión"].unique(),)
 
-df_expectativas_s = df_expectativas.query('Dimensión == @expectativas_s')
+df_expectativas_s = df_expectativas_fuente.query('Dimensión == @expectativas_s')
 
 
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión','Indicador','Expectativa'],values = None)  
