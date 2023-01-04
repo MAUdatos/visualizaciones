@@ -80,8 +80,7 @@ st.markdown('Análisis de respuestas a pregunta *"¿Qué esperas de una articula
 expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas["Indicador"].unique(),)
 
 df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
-
-df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True)
+df_expectativas_s.rename(columns = {'Indicador':'Dimensión',}, inplace = True).groupby(['Dimensión','Expectativas'])
 
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión', 'Expectativa'],values = None)  
 
@@ -92,7 +91,7 @@ else:
     st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')    
     st.plotly_chart(fig1)                 #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus avoid hover
     with st.expander("Ver detalle"):
-            df_expectativas_s = df_expectativas_s.groupby('Dimensión, group_keys = True').apply(lambda x:x)
+            df_expectativas_s = df_expectativas_s.groupby('Dimensión).apply(lambda x:x)
             st.table(df_expectativas_s)
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
@@ -154,8 +153,9 @@ df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'              
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
 #treemap
 #df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
-#st.table(df_bbdd_summary_tree)
-
+#st.table(df_bbdd_summary_tree.groupby(["Nombre Organización, Huerta y/o Colectivo", "Localidad"])["Nombre persona representante"].count()
+                                              
+                                                          
 fig3 = px.treemap()
 
 
