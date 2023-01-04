@@ -152,8 +152,8 @@ df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'              
                                   'Mail Colectivo / Organización o mail personal':'Email',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
 #treemap
-df_bbdd_summary_tree = df_bbdd_summary.groupby('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
-st.table(df_bbdd_summary_tree)
+#df_bbdd_summary_tree = df_bbdd_summary.groupby('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
+#st.table(df_bbdd_summary_tree)
 
 fig3 = px.treemap()
 
