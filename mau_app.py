@@ -79,8 +79,8 @@ st.subheader('Expectativas')
 st.markdown('Análisis de respuestas a preguntas: *"¿Cuáles serían los objetivos de esta articulación [Movimiento]?"* (1er Encuentro) y *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*"')
 
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
-                                    options=df_expectativas["Fuente"].unique(),  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
-                                    default=df_expectativas["Fuente"].unique())
+                                    options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
+                                    #default=df_expectativas["Fuente"].unique())
 
 df_expectativas_fuente = df_expectativas.query('Fuente == @fuente_expectativa')  #Filter by source of information
 
