@@ -77,7 +77,12 @@ st.header('🌻 Análisis 2do Encuentro MAU (3/12/2022)') #
 st.subheader('Expectativas')
 
 st.markdown('Análisis de respuestas a pregunta *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros.*"')
-expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas["Dimensión"].unique(),)
+
+fuente_expectativa = st.multiselect("Selecciona fuente de información", options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
+
+df_expectativas_fuente = df_expectativas.query('Dimensión == @fuente_expectativa')
+
+expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas_fuente["Dimensión"].unique(),)
 
 df_expectativas_s = df_expectativas.query('Dimensión == @expectativas_s')
 
