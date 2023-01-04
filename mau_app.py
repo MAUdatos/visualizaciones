@@ -79,7 +79,7 @@ st.subheader('Expectativas')
 st.markdown('Análisis de respuestas a pregunta *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros.*"')
 expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas["Dimensión"].unique(),)
 
-df_expectativas_s = df_expectativas.query('Indicador == @expectativas_s')
+df_expectativas_s = df_expectativas.query('Dimensión == @expectativas_s')
 
 
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión','Indicador','Expectativa'],values = None)  
