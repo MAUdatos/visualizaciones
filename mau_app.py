@@ -89,7 +89,7 @@ if  len(expectativas_s) == 0:
     st.markdown('Resultados:')
     st.caption(' 🥕 No hay información seleccionada')
 else:   
-    st.plotly_chart(fig1)   #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus hover
+    st.plotly_chart(fig1)                 #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus avoid hover
     with st.expander("Ver detalle"):
             st.table(df_expectativas_s)
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
@@ -113,7 +113,7 @@ if  len(foda_s) == 0:
     st.markdown('Resultados:')
     st.caption('🥕 No hay información seleccionada')
 else:
-    st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés')
+    st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')
     st.plotly_chart(fig2)
     with st.expander("Ver detalle"):
             st.table(df_foda_summary)
