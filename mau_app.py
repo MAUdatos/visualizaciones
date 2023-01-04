@@ -40,7 +40,7 @@ with tab1:
    st.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria (MAU 3/12/2022)       """)
    st.markdown(""" """)
    st.markdown(""" """)
-   st.markdown(""" """)
+   st.markdown(""" """)    #varias lineas vacias para evitar un salto de pagina al cambiar entre Objetivo General y Objetivos Especificos
    st.markdown(""" """)
    st.markdown(""" """)
 with tab2:
@@ -151,6 +151,12 @@ df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'              
                                   'Nombre_representante'                         :'Nombre persona representante',
                                   'Mail Colectivo / Organización o mail personal':'Email',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
+#treemap
+df_bbdd_summary_tree = df_bbdd_summary.groupby('Nombre Organización, Huerta y/o Colectivo')['Localidad','Nombre persona representante']-nuinque()
+st.table(df_bbdd_summary_tree)
+
+fig3 = px.treemap()
+
 
 if  len(Territorio) == 0:
     st.markdown('Resultados')
@@ -163,5 +169,7 @@ else:
         st.metric("Nº Personas representantes",total_individuals_f)
     with right_column:
         st.metric("Nº Territorios identificados",total_localidad_f)
+    
+
     st.table(df_bbdd_summary)
     st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
