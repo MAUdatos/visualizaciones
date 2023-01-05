@@ -78,7 +78,7 @@ def dms2dd(s):
 #df = pd.DataFrame(df_geo,columns=['Latitude','Longitude'])
 #st.map(df)
 
-st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
+st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 st.markdown("""---""")
 '''
 ### Expectativas
