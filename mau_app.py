@@ -70,10 +70,10 @@ df_geo = df_bbdd[['Latitud','Longitud']].dropna(how = 'all')
 df_geo = df_geo.replace(['No info'], '').dropna(how = 'all')
 df_geo = df_geo.replace(['No Info'], '').dropna(how = 'all')
 st.write(df_geo)
-#f_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd).dropna(how = 'all'
-#df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd).dropna(how = 'all'
+df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd).dropna(how = 'all')
+df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd).dropna(how = 'all')
 
-#df = pd.DataFrame(df_geo,columns=['Latitude', 'Longitude'])
+df = pd.DataFrame(df_geo,columns=['Latitude', 'Longitude'])
 st.map(df)
 
 st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
