@@ -55,7 +55,7 @@ with right_column:
     st.metric("Nº Territorios identificados",total_localidad)
 
 df_geo = df_bbdd[['Latitud','Longitud']]
-df = pd.DataFrame([df_geo,columns=['lat', 'lon'])
+df = pd.DataFrame(df_geo,columns=['lat', 'lon'])
 st.map(df)
 
 
