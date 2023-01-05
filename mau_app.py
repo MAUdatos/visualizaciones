@@ -19,11 +19,11 @@ hide_table_row_index = """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 # data
-df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';')              # Base de datos consolidada (1er y 2do encuentro)
+df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';').dropna(how = 'all')              # Base de datos consolidada (1er y 2do encuentro)
 df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';')              # FODA realizado el segundo encuentro
 df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';')  # Expectativas sobre el MAU en formulario del 2do encuentro
 
-df_bbdd  = df_bbdd.dropna(how = 'all')
+#df_bbdd  = df_bbdd.dropna(how = 'all')
 df_foda  = df_foda.dropna(how = 'all')
 df_expectativas = df_expectativas.dropna(how = 'all')
 
