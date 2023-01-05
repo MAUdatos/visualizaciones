@@ -75,7 +75,7 @@ def dms2dd(s):
 #df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd)
 #df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd)
 #st.write(df_geo)
-#df = pd.DataFrame(df_geo,columns=['Latitude', 'Longitude'])
+#df = pd.DataFrame(df_geo,columns=['Latitude','Longitude'])
 #st.map(df)
 
 st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
