@@ -3,10 +3,10 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
-#Dashboard structure
+# Dashboard structure
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="centered")
 
-#Hide index when showing a table
+# Hide index when showing a table
 # CSS to inject contained in a string
 hide_table_row_index = """
             <style>
@@ -18,16 +18,16 @@ hide_table_row_index = """
 # Inject CSS with Markdown
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
-#data
-df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';') #Base de datos consolidada (1er y 2do encuentro)
-df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';') #FODA realizado el segundo encuentro
-df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';') #Expectativas sobre el MAU en formulario del 2do encuentro
+# data
+df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';')              # Base de datos consolidada (1er y 2do encuentro)
+df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';')              # FODA realizado el segundo encuentro
+df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';')  # Expectativas sobre el MAU en formulario del 2do encuentro
 
 df_bbdd  = df_bbdd.dropna(how = 'all')
 df_foda  = df_foda.dropna(how = 'all')
 df_expectativas = df_expectativas.dropna(how = 'all')
 
-#General Information for the main page
+# General Information for the main page
 
 col_x, col_y = st.columns(2)
 col_x.image("logo_mau.png", width= 200)
@@ -51,7 +51,7 @@ with tab2:
 
 st.markdown("""---""")
 
-#Tabs to organice information
+# Tabs to organice information
 st.subheader('🍃 Información General MAU') #
 
 # Key Variables
@@ -71,11 +71,11 @@ st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 202
 
 st.markdown("""---""")
 
-###Expectativas
+# Expectativas
 
 st.header('🌻 Análisis Encuentros MAU (2022)') #
-st.markdown(´1er Encuentro: )
-
+st.markdown('1er Encuentro: 11/2022')
+st.markdown('2do Encuentro: 12/2022')
 st.subheader('Expectativas')
 
 st.markdown('Análisis de respuestas a preguntas: \n *"¿Cuáles serían los objetivos de esta articulación [Movimiento]?"* (1er Encuentro) y *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*"')
@@ -107,7 +107,7 @@ else:
             st.table(df_expectativas_s)
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
-### Análisis FODA
+# Análisis FODA
 
 st.subheader('Análisis FODA')
 st.markdown('El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
@@ -163,13 +163,10 @@ df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'              
                                   'Nombre_representante'                         :'Nombre persona representante',
                                   'Mail Colectivo / Organización o mail personal':'Email',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
-#treemap
-#df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
-#st.table(df_bbdd_summary_tree.groupby(["Nombre Organización, Huerta y/o Colectivo", "Localidad"])["Nombre persona representante"].count()
-                                              
-                                                          
-#fig3 = px.treemap()
-
+# treemap
+# df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
+# st.table(df_bbdd_summary_tree.groupby(["Nombre Organización, Huerta y/o Colectivo", "Localidad"])["Nombre persona representante"].count()
+# fig3 = px.treemap()
 
 if  len(Territorio) == 0:
     st.markdown('Resultados')
@@ -183,6 +180,5 @@ else:
     with right_column:
         st.metric("Nº Territorios identificados",total_localidad_f)
     
-
     st.table(df_bbdd_summary)
     st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
