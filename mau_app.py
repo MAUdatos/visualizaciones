@@ -38,16 +38,10 @@ tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 
 with tab1:
    st.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria""") #(MAU 3/12/2022)
-   st.markdown(""" """)
-   st.markdown(""" """)
-   st.markdown(""" """)    #varias lineas vacias para evitar un salto de pagina al cambiar entre Objetivo General y Objetivos Especificos
-   st.markdown(""" """)
-   st.markdown(""" """)
 with tab2:
    st.markdown("- Generar redes de apoyo para potenciar el intercambio de saberes, experiencias y recursos entre organizaciones y territorios urbanos, \
-                periurbanos y rurales\n- Recuperar y regenerar los espacios para el aumento de la biodiversidad y el cultivo de alimentos saludables")
-   st.markdown("- Generar estrategias metodológicas para compartir saberes y experiencias en torno a la agroecología urbana, periurbana y rural")
-
+                periurbanos y rurales\n- Recuperar y regenerar los espacios para el aumento de la biodiversidad y el cultivo de alimentos \
+                saludables\n- Generar estrategias metodológicas para compartir saberes y experiencias en torno a la agroecología urbana, periurbana y rural")
 st.markdown("""---""")
 
 # Tabs to organice information
