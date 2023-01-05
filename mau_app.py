@@ -70,14 +70,16 @@ st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 202
 
 st.markdown("""---""")
 
-# Expectativas
+### Expectativas
 
 st.header('🌻 Análisis Encuentros MAU') #
 st.markdown('1er Encuentro:   11/2022')
 st.markdown('2do Encuentro:   12/2022')
 st.subheader('Expectativas')
-st.markdown("Análisis de respuestas a preguntas:\n*"\¿Cuáles serían los objetivos de esta articulación [Movimiento]?"*\n(1er Encuentro)\n*"\¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*""
-)           
+st.markdown("Análisis de respuestas a preguntas:")
+st.markdown("*Cuáles serían los objetivos de esta articulación [Movimiento]? (1er Encuentro)*")
+st.markdown("*¿Qué esperas de una articulación entre huertas urbanas? (2do encuentro)*")
+      
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
                                     options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
                                     #default=df_expectativas["Fuente"].unique())
