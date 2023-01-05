@@ -6,8 +6,7 @@ import plotly.express as px
 # Dashboard structure
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
 
-# Hide index when showing a table
-# CSS to inject contained in a string
+# Hide index when showing a table. CSS to inject contained in a string
 hide_table_row_index = """
             <style>
             thead tr th:first-child {display:none}
@@ -19,18 +18,13 @@ hide_table_row_index = """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 # data
-df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';').dropna(how = 'all')              # Base de datos consolidada (1er y 2do encuentro)
-df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';')              # FODA realizado el segundo encuentro
-df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';')  # Expectativas sobre el MAU en formulario del 2do encuentro
-
-#df_bbdd  = df_bbdd.dropna(how = 'all')
-df_foda  = df_foda.dropna(how = 'all')
-df_expectativas = df_expectativas.dropna(how = 'all')
+df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';').dropna(how = 'all')             # Base de datos consolidada (1er y 2do encuentro)
+df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';').dropna(how = 'all')             # FODA realizado el segundo encuentro
+df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna(how = 'all') # Expectativas sobre el MAU en formulario del 2do encuentro
 
 # General Information for the main page
-
 col_x, col_y = st.columns(2)
-col_x.image("logo_mau.png", width= 200)
+col_x.image("logo_mau.png", width=200)
 col_y.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
 
@@ -61,11 +55,9 @@ with right_column:
     st.metric("Nº Territorios identificados",total_localidad)
 
 st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
-
 st.markdown("""---""")
 
 ### Expectativas
-
 st.header('🌻 Análisis Encuentros MAU') #
 st.text("1er Encuentro: 11-2022\n2do Encuentro: 12-2022")
 st.subheader('Expectativas')
@@ -86,7 +78,6 @@ expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas_f
 
 df_expectativas_s = df_expectativas_fuente.query('Dimensión == @expectativas_s')
 
-
 fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión','Indicador','Expectativa'],values = None)  
 
 if  len(expectativas_s) == 0:
@@ -100,7 +91,6 @@ else:
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
 # Análisis FODA (12/2022)
-
 st.subheader('Análisis FODA (12/2022)')
 st.markdown('El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
 espacios que forman el MAU. Para ello se consideraron 4 marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.')
