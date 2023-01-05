@@ -67,11 +67,12 @@ def dms2dd(s):
     return dd
 
 df_geo = df_bbdd[['Latitud','Longitud']].dropna(how = 'all')
-df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd)
-df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd)
+st.write(df_geo)
+#df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd)
+#df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd)
 
-df = pd.DataFrame(df_geo,columns=['Latitude', 'Longitude'])
-st.map(df)
+#df = pd.DataFrame(df_geo,columns=['Latitude', 'Longitude'])
+#st.map(df)
 
 st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
 st.markdown("""---""")
