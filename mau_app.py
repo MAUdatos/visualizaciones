@@ -185,4 +185,4 @@ else:
     with right_column:
         st.metric("Nº Territorios identificados",total_localidad_f)
     st.table(df_bbdd_summary)
-    st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
+    st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
