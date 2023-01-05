@@ -155,12 +155,11 @@ total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique
 total_individuals_f = df_bbdd_filtered['Nombre_representante'].nunique()
 total_localidad_f   = df_bbdd_filtered['Localidad'].nunique()
 
-df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_representante','Mail Colectivo / Organización o mail personal', \
+df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_representante', \
                                     'Localidad','Relación con la agroecología','Link redes sociales']]
 
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
                                   'Nombre_representante'                         :'Nombre persona representante',
-                                  'Mail Colectivo / Organización o mail personal':'Email',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
 # treemap
 # df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
