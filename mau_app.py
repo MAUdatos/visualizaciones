@@ -77,9 +77,16 @@ st.header('🌻 Análisis Encuentros MAU') #
 st.markdown('1er Encuentro:   11/2022')
 st.markdown('2do Encuentro:   12/2022')
 st.subheader('Expectativas')
-st.markdown('Análisis de respuestas a preguntas: \n
- *"¿Cuáles serían los objetivos de esta articulación [Movimiento]?"* (1er Encuentro) y *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*"')
+st.markdown(
+'Análisis de respuestas a preguntas: /n"
+'*"¿Cuáles serían los objetivos de esta articulación [Movimiento]?"* (1er Encuentro) /n'
+'*"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*"'
+)
 
+ "90% of people love to enjoy music, while they are working! \n"
+"are you one of them, we have a curated list of chillout tracks \n"
+            
+            
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
                                     options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
                                     #default=df_expectativas["Fuente"].unique())
