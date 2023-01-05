@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import re
 
 # Dashboard structure
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
@@ -54,10 +55,23 @@ with middle_column:
 with right_column:
     st.metric("Nº Territorios identificados",total_localidad)
 
+#https://stackoverflow.com/questions/33997361 
+#https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
+
+def dms2dd(s):
+    # example: s = """0°51'56.29"S"""
+    degrees, minutes, seconds, direction = re.split('[°\'"]+', s)
+    dd = float(degrees) + float(minutes)/60 + float(seconds)/(60*60);
+    if direction in ('S','W'):
+        dd*= -1
+    return dd
+
 df_geo = df_bbdd[['Latitud','Longitud']]
+df_geo['Latitude']  = df_geo['Latitude' ].apply(dms2dd)
+df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd)
+
 df = pd.DataFrame(df_geo,columns=['lat', 'lon'])
 st.map(df)
-
 
 st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
 st.markdown("""---""")
