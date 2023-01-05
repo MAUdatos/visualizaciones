@@ -77,7 +77,7 @@ st.markdown('1er Encuentro:   11/2022')
 st.markdown('2do Encuentro:   12/2022')
 st.subheader('Expectativas')
 st.markdown("Análisis de respuestas a preguntas:")
-st.markdown("*Cuáles serían los objetivos de esta articulación [Movimiento]?* (1er Encuentro)")
+st.markdown("*Cuáles serían los objetivos de esta articulación* [Movimiento]? (1er Encuentro)")
 st.markdown("*¿Qué esperas de una articulación entre huertas urbanas?* (2do encuentro)")
       
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
