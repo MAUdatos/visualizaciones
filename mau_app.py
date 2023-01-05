@@ -67,7 +67,7 @@ st.markdown("""---""")
 ### Expectativas
 
 st.header('🌻 Análisis Encuentros MAU') #
-st.text("1er Encuentro: 11-2022\n 2do Encuentro: 12-2022")
+st.markdown("1er Encuentro: 11/2022\n2do Encuentro: 12/2022")
 st.subheader('Expectativas')
 st.markdown("Análisis de respuestas a preguntas:")
 st.markdown("*Cuáles serían los objetivos de esta articulación* [Movimiento]? (1er Encuentro)")
@@ -171,6 +171,5 @@ else:
         st.metric("Nº Personas representantes",total_individuals_f)
     with right_column:
         st.metric("Nº Territorios identificados",total_localidad_f)
-    
     st.table(df_bbdd_summary)
     st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
