@@ -73,7 +73,7 @@ st.markdown("""---""")
 
 ###Expectativas
 
-st.header('🌻 Análisis 2do Encuentro MAU (3/12/2022)') #
+st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') #
 st.subheader('Expectativas')
 
 st.markdown('Análisis de respuestas a preguntas: *"¿Cuáles serían los objetivos de esta articulación [Movimiento]?"* (1er Encuentro) y *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*"')
