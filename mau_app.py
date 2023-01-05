@@ -54,6 +54,13 @@ with middle_column:
 with right_column:
     st.metric("Nº Territorios identificados",total_localidad)
 
+df = pd.DataFrame(
+    [df_bbdd['Latitud],df_bbdd['Longitud']],
+    columns=['lat', 'lon'])
+
+st.map(df)
+
+
 st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
 st.markdown("""---""")
 
