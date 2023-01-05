@@ -66,7 +66,7 @@ def dms2dd(s):
         dd*= -1
     return dd
 
-df_geo = df_bbdd[['Latitude','Longitud']].dropna(how = 'all')
+df_geo = df_bbdd[['Latitude','Longitude']].dropna(how = 'all')
 df_geo = df_geo.replace(['No info'], '')
 df_geo = df_geo.replace(['No Info'], '')
 df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd)
