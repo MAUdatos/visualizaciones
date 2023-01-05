@@ -66,14 +66,15 @@ def dms2dd(s):
         dd*= -1
     return dd
 
-#cast tp map
-'''df_geo = df_bbdd[['Latitude','Longitude']]
-df_geo = df_geo.replace(['No info'], '')
-df_geo = df_geo.replace(['No Info'], '')
-df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd)
-df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd)
-st.write(df_geo)
+#mapping coordinates to a Chilean map - work in progress
 
+#cast tp map
+#df_geo = df_bbdd[['Latitude','Longitude']]
+#df_geo = df_geo.replace(['No info'], '')
+#df_geo = df_geo.replace(['No Info'], '')
+#df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd)
+#df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd)
+#st.write(df_geo)
 #df = pd.DataFrame(df_geo,columns=['Latitude', 'Longitude'])
 #st.map(df)
 
