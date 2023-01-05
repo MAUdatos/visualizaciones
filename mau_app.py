@@ -67,7 +67,7 @@ st.markdown("""---""")
 ### Expectativas
 
 st.header('🌻 Análisis Encuentros MAU') #
-st.markdown("1er Encuentro: 11/2022\n 2do Encuentro: 12/2022")
+st.markdown("1er EncuentroS: 11/2022 \n 2do Encuentro: 12/2022")
 st.subheader('Expectativas')
 st.markdown("Análisis de respuestas a preguntas:")
 st.markdown("*Cuáles serían los objetivos de esta articulación* [Movimiento]? (1er Encuentro)")
@@ -155,10 +155,10 @@ df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_rep
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
                                   'Nombre_representante'                         :'Nombre persona representante',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
-# treemap
-# df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
-# st.table(df_bbdd_summary_tree.groupby(["Nombre Organización, Huerta y/o Colectivo", "Localidad"])["Nombre persona representante"].count()
-# fig3 = px.treemap()
+--treemap
+--df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
+--st.table(df_bbdd_summary_tree.groupby(["Nombre Organización, Huerta y/o Colectivo", "Localidad"])["Nombre persona representante"].count()
+--fig3 = px.treemap()
 
 if  len(Territorio) == 0:
     st.markdown('Resultados')
