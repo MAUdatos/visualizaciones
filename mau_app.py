@@ -73,10 +73,12 @@ st.markdown("""---""")
 
 ###Expectativas
 
-st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') #
+st.header('🌻 Análisis Encuentros MAU (2022)') #
+st.markdown(´1er Encuentro: )
+
 st.subheader('Expectativas')
 
-st.markdown('Análisis de respuestas a preguntas: *"¿Cuáles serían los objetivos de esta articulación [Movimiento]?"* (1er Encuentro) y *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*"')
+st.markdown('Análisis de respuestas a preguntas: \n *"¿Cuáles serían los objetivos de esta articulación [Movimiento]?"* (1er Encuentro) y *"¿Qué esperas de una articulación entre huertas urbanas? Tus ideas nos pueden ayudar delinear el programa de futuros encuentros (2do encuentro).*"')
 
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
                                     options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
