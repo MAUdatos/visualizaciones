@@ -79,7 +79,7 @@ st.text("")
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
 
-col5, col6 = st.columns((1,1))
+col5, col6, col7 = st.columns((10,1,10))
 
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP
@@ -118,8 +118,8 @@ df['lon'] = df['lon'].apply(dms2dd)
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
 df_geo.style.set_caption("Hello World")
 #df_geo.update_geos(fitbounds="locations") #for some reason it wont work now
-col6.caption("Distribución geográfica de las Organizaciones, Huertas y/o Comunidades")
-col6.map(df_geo)
+col7.caption("Distribución geográfica de las Organizaciones, Huertas y/o Comunidades")
+col7.map(df_geo)
 st.markdown("""---""")
 
 #________________________________________________________________________________________________________________________________________________________________
