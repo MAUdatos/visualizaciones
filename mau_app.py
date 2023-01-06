@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import re
-import matplotlib.pyplot as plt
-from matplotlib_venn import venn2
+#import matplotlib.pyplot as plt
+#from matplotlib_venn import venn2
 
 #__________________________________________________________________________________________________________________________________________________________________
 # Dashboard structure
@@ -133,8 +133,8 @@ asist_1er   = len(df_bbdd_p[df_bbdd_p['Asistencia 1er Encuentro']=='Sí'])
 asist_2do   = len(df_bbdd_p[df_bbdd_p['Asistencia 2do Encuentro']=='Sí'])
 asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df_bbdd_p['Asistencia 2do Encuentro']=='Sí')])
 
-fig = venn2(subsets = (asist_1er, asist_2do, asist_ambos), set_labels = ('1er Encuentro', '2do Encuentro'))
-st.plotly_chart(fig)
+#fig = venn2(subsets = (asist_1er, asist_2do, asist_ambos), set_labels = ('1er Encuentro', '2do Encuentro'))
+#st.plotly_chart(fig)
 
 #_____________________________________
 st.subheader('Participación')
