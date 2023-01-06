@@ -84,9 +84,9 @@ df = df[df['lon'] != 'No Info']
 df = df[~(df['lon']==df['lat'])] # to exclude error values -> .csv to be corrected
 df['lat'] = df['lat'].apply(dms2dd)
 df['lon'] = df['lon'].apply(dms2dd)
-df_geo = pd.DataFrame(df,columns=['lat','lon'])
-df_geo.update_geos(fitbounds="locations")
-st.map(df_geo)
+df = pd.DataFrame(df,columns=['lat','lon'])
+df.update_geos(fitbounds="locations")
+st.map(df)
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 st.markdown("""---""")
