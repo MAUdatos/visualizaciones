@@ -93,12 +93,11 @@ col1.text("1er Encuentro: 11/2022")
 col2.text("2do Encuentro: 12/2022")
 
 st.subheader('Expectativas')
-st.markdown("Análisis de respuestas a preguntas:")
-st.text("1er Encuentro: *¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
-st.text("2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")   
-st.markdown("- Item 1")
-st.markdown("- Item 2")
-st.markdown("- Item 3")
+
+st.markdown("Análisis de respuestas a preguntas:") 
+st.markdown("- 1er Encuentro: *¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
+st.markdown("- 2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
+
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
                                     options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
                                     #default=df_expectativas["Fuente"].unique())
