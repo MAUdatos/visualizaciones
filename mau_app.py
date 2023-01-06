@@ -86,7 +86,7 @@ st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 202
 st.markdown("""---""")
 
 ### Expectativas
-st.header('🌻 Análisis Encuentros MAU (1er: 11/2022, 2do: 12/2022)') 
+st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') 
 
 col0, col1, col2, col3 = st.columns((0.1,1,1,6))
 col1.text("1er Encuentro:")
