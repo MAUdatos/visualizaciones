@@ -49,12 +49,13 @@ with col1:
 ### Mau en números
 
 # Key Variables
-total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
-total_individuals = df_bbdd['Nombre_representante'].nunique()
-total_localidad   = df_bbdd['Localidad'].nunique()
-
 with col2:
     st.subheader('MAU en números')
+
+    total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
+    total_individuals = df_bbdd['Nombre_representante'].nunique()
+    total_localidad   = df_bbdd['Localidad'].nunique()
+            
     left_column, middle_column, right_column, empty_column = st.columns(4)
     with left_column:
         st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
