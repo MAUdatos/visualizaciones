@@ -135,10 +135,10 @@ asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df
 st.subheader('Participación')
 #_____________________________________
 col1, col2, col3, col4 = st.columns((1,1,1,3))
-
-col1.metric("Asistencia Personas 1er Encuentro",asist_1er)
-col2.metric("Asistencia Personas 2do Encuentro",asist_2do)
-col3.metric("Personas que asistieron a ambos",asist_ambos) 
+st.markdown('Asistencia personas a encuentros del MAU')
+col1.metric("1er Encuentro",asist_1er)
+col2.metric("2do Encuentro",asist_2do)
+col3.metric("Ambos Encuentros",asist_ambos) 
 st.markdown("""---""")
 #____________________________________________________
 st.subheader('Análisis de Expectativas')
@@ -256,6 +256,6 @@ st.markdown("""---""")
 #______________________________
 st.subheader('✨ Oportunidades de mejora')
 #______________________________
-st.write("Comenta tu experiencia con esta aplicación aquí [link](https://forms.gle/fwULxu8f7kdrKDVFA)")
-st.markdown('Con esta información buscamos:\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
+st.write("Comenta tu experiencia con esta aplicación [aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
+st.markdown('Con su información buscamos:\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
 
