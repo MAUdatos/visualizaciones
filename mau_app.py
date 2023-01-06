@@ -79,7 +79,7 @@ st.text("")
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
 
-col5, col6, col7 = st.columns((10,1,8))
+col5, col6, col7 = st.columns((10,1,6))
 
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP
