@@ -77,12 +77,14 @@ def dms2dd(s):
         dd*= -1
     return dd
 
-df = df_bbdd[['Latitud','Longitud']]
-df = df[df['Latitud'] != 'No info']
-df = df[df['Latitud'] != 'No Info']
-df['Latitud']  = df['Latitud'].apply(dms2dd)
-df['Longitud'] = df['Longitud'].apply(dms2dd)
-df_geo = pd.DataFrame(df,columns=['Latitud','Longitud'])
+df_bbdd.rename(columns = {'Latitud': 'lat, 'Longitud':'lon',},  inplace = True)
+df = df_bbdd[['lat','lon']]
+df = df[df['lat'] != 'No info']
+df = df[df['lon'] != 'No Info']
+df['lat']  = df['lat'].apply(dms2dd)
+df['lon'] = df['lon'].apply(dms2dd)
+
+df_geo = pd.DataFrame(df,columns=['lat','lon'])
 st.map(df_geo)
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
