@@ -30,7 +30,7 @@ col_y.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el
 st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
 
 # Tabs to organize information
-st.header('🍃 Información General MAU') #
+st.header('🍃 Información General MAU') 
 st.subheader('Objetivos')
 tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 with tab1:
