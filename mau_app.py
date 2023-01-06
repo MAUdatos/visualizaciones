@@ -54,11 +54,11 @@ total_localidad   = df_bbdd['Localidad'].nunique()
 
 left_column, middle_column, right_column, empty_column = col_y.columns(4)
 with left_column:
-    col_y.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
+    st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 with middle_column:
-    col_y.metric("Nº Personas representantes",total_individuals)
+    st.metric("Nº Personas representantes",total_individuals)
 with right_column:
-    col_y.metric("Nº Territorios identificados",total_localidad)
+    st.metric("Nº Territorios identificados",total_localidad)
 
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
