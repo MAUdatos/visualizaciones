@@ -77,7 +77,7 @@ def dms2dd(s):
         dd*= -1
     return dd
 
-df_bbdd.rename(columns = {'Latitud': 'lat, 'Longitud':'lon',},  inplace = True)
+df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 df = df_bbdd[['lat','lon']]
 df = df[df['lat'] != 'No info']
 df = df[df['lon'] != 'No Info']
