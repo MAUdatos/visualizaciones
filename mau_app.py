@@ -87,7 +87,7 @@ fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organiz
 fig.update_traces(root_color="lightgreen")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
-st.plotly_chart(fig)
+col5.plotly_chart(fig)
 
 #___________________________________
 # Changing coordinates to decimals
