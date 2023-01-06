@@ -82,7 +82,7 @@ def animate_number(n,anim_time=0.1):
             end_of_loop = True
     time.sleep(anim_time)
 
-animate_number(50,0.4)
+st.write(animate_number(50,0.4))
             
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
