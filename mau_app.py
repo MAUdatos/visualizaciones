@@ -126,9 +126,10 @@ st.markdown("""---""")
 st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') 
 #________________________________________________________________________________________________________________________________________________________________
 
-asist_1er   = len(df_bbdd[df_bbdd['Asistencia 1er Encuentro']=='Sí'])
-asist_2do   = len(df_bbdd[df_bbdd['Asistencia 2do Encuentro']=='Sí'])
-asist_ambos = len(df_bbdd[(df_bbdd['Asistencia 1er Encuentro']=='Sí') & (df_bbdd['Asistencia 2do Encuentro']=='Sí')])
+df_bbdd_p = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante','Asistencia 1er Encuentro','Asistencia 2do Encuentro'])
+asist_1er   = len(df_bbdd_p[df_bbdd_p['Asistencia 1er Encuentro']=='Sí'])
+asist_2do   = len(df_bbdd_p[df_bbdd_p['Asistencia 2do Encuentro']=='Sí'])
+asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df_bbdd_p['Asistencia 2do Encuentro']=='Sí')])
 _____________________________________
 st.subheader('Participación')
 _____________________________________
