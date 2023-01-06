@@ -1,2 +1,3 @@
-1. Nest columns within the webpage to optimize the view
-https://github.com/joy13975/streamlit-nested-layout/blob/main/demo.py
+1. Nest columns within the webpage to optimize the view - https://github.com/joy13975/streamlit-nested-layout/blob/main/demo.py
+2. More customization for geo maps - https://geemap.org/workshops/Crop_Mapping_2022/#using-earth-engine
+
