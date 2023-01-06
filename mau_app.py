@@ -5,7 +5,6 @@ import plotly.express as px
 import re
 import matplotlib.pyplot as plt
 from matplotlib_venn import venn2
-#import time   #to add animations of elements e.g. with pyautogui
 
 #__________________________________________________________________________________________________________________________________________________________________
 # Dashboard structure
@@ -134,8 +133,8 @@ asist_1er   = len(df_bbdd_p[df_bbdd_p['Asistencia 1er Encuentro']=='Sí'])
 asist_2do   = len(df_bbdd_p[df_bbdd_p['Asistencia 2do Encuentro']=='Sí'])
 asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df_bbdd_p['Asistencia 2do Encuentro']=='Sí')])
 
-venn2(subsets = (asist_1er, asist_2do, asist_ambos), set_labels = ('1er Encuentro', '2do Encuentro'))
-st.plotly_chart(plt)
+fig = venn2(subsets = (asist_1er, asist_2do, asist_ambos), set_labels = ('1er Encuentro', '2do Encuentro'))
+st.plotly_chart(fig)
 
 #_____________________________________
 st.subheader('Participación')
