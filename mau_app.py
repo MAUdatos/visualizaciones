@@ -76,8 +76,8 @@ def dms2dd(s):
 
 #mapping coordinates to a Chilean map - work in progress
 
-df_geo = df_bbdd[['Latitude','Longitude']]
-st.table(df_geo)
+#df_geo = df_bbdd[['Latitude','Longitude']]
+st.table(df_bbdd)
 """
 df_geo = df_geo.replace(['No info'], '')
 df_geo = df_geo.replace(['No Info'], '')
