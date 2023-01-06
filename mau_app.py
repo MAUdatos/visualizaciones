@@ -82,11 +82,8 @@ df = df[df['Latitud'] != 'No info']
 df = df[df['Latitud'] != 'No Info']
 df['Latitud']  = df['Latitud'].apply(dms2dd)
 df['Longitud'] = df['Longitud'].apply(dms2dd)
-st.write(df_geo)
-df = pd.DataFrame(df_geo,columns=['Latitud','Longitud'])
-st.map(df)
-
-#st.table(df_geo)
+df_geo = pd.DataFrame(df,columns=['Latitud','Longitud'])
+st.map(df_geo)
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 st.markdown("""---""")
