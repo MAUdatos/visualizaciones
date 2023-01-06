@@ -86,7 +86,7 @@ st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 202
 st.markdown("""---""")
 
 ### Expectativas
-st.header('🌻 Análisis Encuentros MAU') 
+st.header('🌻 Análisis Encuentros MAU (1er: 11/2022, 2do: 12/2022)') 
 
 col0, col1, col2, col3 = st.columns((0.1,1,1,6))
 col1.text("1er Encuentro:")
@@ -98,9 +98,10 @@ st.subheader('Análisis de expectativas')
 #st.markdown("Análisis de respuestas a preguntas:") 
 
 col0, col1, col2, col3 = st.columns((0.1,1,6,1))
-col1.text("1er Encuentro:")
+
+col1.markdown("1er Encuentro:")
+col1.markdown("2do Encuentro:")
 col2.markdown("*¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
-col1.text("2do Encuentro:")
 col2.markdown("*¿Qué esperas de una articulación entre huertas urbanas?*")
 
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
@@ -154,7 +155,7 @@ else:
             st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
 st.markdown("""---""")
 
-st.subheader("🌽 Análisis de sistematización y mapeo")
+st.subheader("🌽 Análisis de sistematización y mapeo (12/2022)")
 
 Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
 all_options = st.checkbox("Todos los territorios")
