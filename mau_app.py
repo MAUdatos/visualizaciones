@@ -125,15 +125,30 @@ st.markdown("""---""")
 #________________________________________________________________________________________________________________________________________________________________
 st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') 
 #________________________________________________________________________________________________________________________________________________________________
-st.subheader('Análisis de expectativas')
-#st.markdown("Análisis de respuestas a preguntas:") 
 
+asist_1er   = len(df[df['Asistencia 1er Encuentro']=='Sí'])
+asist_2do   = len(df[df['Asistencia 2do Encuentro']=='Sí'])
+asist_ambos = len(df[(df['Asistencia 1er Encuentro']=='Sí') & (df['Asistencia 2do Encuentro']=='Sí')])
+_____________________________________
+st.subheader('Participación')
+_____________________________________
+col1, col2, col3, col4,col5 = st.columns((1.6,1,1,3))
+
+col1.metric("Asistencia Personas 1er Encuentro",asist_1er)
+col2.metric("Asistencia Personas 2do Encuentro",asist_2do)
+col3.metric("Personas que asistieron a ambos",asist_ambos) 
+____________________________________________________
+st.subheader('Análisis de expectativas')
+____________________________________________________
 col0, col1, col2, col3 = st.columns((0.1,1,6,1))
 
 col1.markdown("1er Encuentro:")
 col1.markdown("2do Encuentro:")
 col2.markdown("*¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
 col2.markdown("*¿Qué esperas de una articulación entre huertas urbanas?*")
+
+
+
 
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
                                     options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
