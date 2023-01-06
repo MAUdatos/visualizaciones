@@ -47,8 +47,6 @@ st.markdown("""----""")
 # Key Variables
 st.subheader('MAU en números')
 
-st.table(df_bbdd)
-
 total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
