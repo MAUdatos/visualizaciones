@@ -68,19 +68,21 @@ col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streaml
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
+col4.metric("Nº Redes sociales",total_inst))
 
-t = st.empty()                       #idea adapted from https://discuss.streamlit.io/t/how-to-dynamically-update-a-text-in-a-text-box/12564/3
-end_of_loop = False 
-counter = 1
+def animate_number(n,anim_time=0.1):
+    t = st.empty()                       #idea adapted from https://discuss.streamlit.io/t/how-to-dynamically-update-a-text-in-a-text-box/12564/3
+    end_of_loop = False 
+    counter = 1
 
-while (end_of_loop==False):
-    t.write('Counter: ' + str(counter))
-    counter += 1
-    if (counter > 50) :
-        end_of_loop = True
+    while (end_of_loop==False):
+        t.write('Counter: ' + str(counter))
+        counter += 1
+        if (counter > n) :
+            end_of_loop = True
+    time.sleep(anim_time)
 
-    time.sleep(0.2)
-
+animate_number(50)
             
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
