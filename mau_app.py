@@ -97,7 +97,7 @@ col2.markdown("12/2022")
 st.subheader('Análisis de expectativas')
 #st.markdown("Análisis de respuestas a preguntas:") 
 
-col0, col1, col2, col3 = st.columns((0.1,2,1,6))
+col0, col1, col2, col3 = st.columns((0.1,1,6,1))
 col1.text("1er Encuentro:")
 col2.markdown("*¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
 col1.text("2do Encuentro:")
