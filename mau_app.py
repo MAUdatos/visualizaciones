@@ -68,7 +68,7 @@ col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streaml
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
-col4.metric("Nº Redes sociales",total_inst))
+col4.metric("Nº Redes sociales",total_inst)
 
 def animate_number(n,anim_time=0.1):
     t = st.empty()                       #idea adapted from https://discuss.streamlit.io/t/how-to-dynamically-update-a-text-in-a-text-box/12564/3
