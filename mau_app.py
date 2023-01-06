@@ -81,12 +81,15 @@ df_geo = df_geo.replace(['No info'], '')
 df_geo = df_geo.replace(['No Info'], '')
 st.table(df_geo)
 
-"""
 df_geo['Latitud']  = df_geo['Latitud'].apply(dms2dd)
-df_geo['Longitud'] = df_geo['Longitud'].apply(dms2dd)
-st.write(df_geo)
-df = pd.DataFrame(df_geo,columns=['Latitud','Longitud'])
-st.map(df)
+#df_geo['Longitud'] = df_geo['Longitud'].apply(dms2dd)
+#st.write(df_geo)
+#df = pd.DataFrame(df_geo,columns=['Latitud','Longitud'])
+#st.map(df)
+
+st.table(df_geo)
+
+
 """
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 st.markdown("""---""")
