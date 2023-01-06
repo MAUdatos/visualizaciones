@@ -71,6 +71,7 @@ col3.metric("Nº Territorios identificados",total_localidad)
 col4.metric("Nº Redes sociales",total_inst)
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
+st.text("")
 
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
