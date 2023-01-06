@@ -64,9 +64,9 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
        
-st.text("")
 st.caption('<div style="text-align: left">Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022</h1></div>', unsafe_allow_html=True) 
-         
+st.text("")
+
 #st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
 col1, col2, col3, col4, col5 = st.columns((1.6,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
@@ -98,7 +98,7 @@ col5.caption('Distribución de las Personas representantes por Regiones y Locali
 col5.plotly_chart(fig)
 
 #___________________________________
-# Changing coordinates to decimals
+# Changing geo coordinates to decimals
 #___________________________________
 @st.cache
 def dms2dd(s):
