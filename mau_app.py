@@ -4,7 +4,7 @@ import numpy as np
 import plotly.express as px
 import re
 import matplotlib.pyplot as plt
-from matplotlib_venn import venn2
+import matplotlib_venn.venn2 as venn2
 
 #__________________________________________________________________________________________________________________________________________________________________
 # Dashboard structure
