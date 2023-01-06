@@ -98,7 +98,7 @@ st.subheader('Análisis de expectativas')
 col1, col2, col3 = st.columns((1,1,1))
 col1.markdown("1er Encuentro: *¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
 col2.markdown("*¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
-col1.markdown("- 2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
+col1.markdown("2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
 col2.markdown("*¿Qué esperas de una articulación entre huertas urbanas?*")
 
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
