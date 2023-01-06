@@ -27,6 +27,7 @@ df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';').dropna(how = 'all'
 df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna(how = 'all') # Expectativas sobre el MAU en formulario del 2do encuentro
 
 df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
+
 #__________________________________________________________________________________________________________________________________________________________________
 # General Information for the main page
 #__________________________________________________________________________________________________________________________________________________________________
@@ -38,22 +39,6 @@ col3.text("  ")
 col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
-
-
-t = st.empty()
-end_of_loop = False 
-counter = 1
-
-while (end_of_loop==False):
-    t.write('Counter: ' + str(counter))
-    if (counter % 10 ==0) :
-        t = st.empty()
-
-    counter += 1
-    if (counter > 100) :
-        end_of_loop = True
-
-    time.sleep(0.2)
 
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
@@ -84,11 +69,18 @@ col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
 
-i = 0
-while i < total_inst:
-    col4.metric("Nº Redes sociales",i)
-    time.sleep(0.05)
-    i = i + 1
+t = st.empty()                       #idea adapted from https://discuss.streamlit.io/t/how-to-dynamically-update-a-text-in-a-text-box/12564/3
+end_of_loop = False 
+counter = 1
+
+while (end_of_loop==False):
+    t.write('Counter: ' + str(counter))
+    counter += 1
+    if (counter > 50) :
+        end_of_loop = True
+
+    time.sleep(0.2)
+
             
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
