@@ -56,7 +56,7 @@ with tab2:
 st.markdown("""----""")
 
 #______________________________
-st.subheader('MAU en números')
+st.subheader('MAU en Números')
 #______________________________
 total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
@@ -82,7 +82,7 @@ st.text("")
 col5, col6 = st.columns((1,1))
 
 #___________________________________________________________________________________________________________________________________________________________
-# TREEAMAP - work in progress
+# TREEAMAP
 #___________________________________________________________________________________________________________________________________________________________
 df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante'])
 df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo'])['Nombre_representante'].count()       # aggregating by number of representatives
@@ -140,7 +140,7 @@ col2.metric("Asistencia Personas 2do Encuentro",asist_2do)
 col3.metric("Personas que asistieron a ambos",asist_ambos) 
 st.markdown("""---""")
 #____________________________________________________
-st.subheader('Análisis de expectativas')
+st.subheader('Análisis de Expectativas')
 #____________________________________________________
 col0, col1, col2, col3 = st.columns((0.1,1,6,1))
 
@@ -204,7 +204,7 @@ else:
 st.markdown("""---""")
 
 #_________________________________________________________________
-st.subheader("🌽 Análisis de sistematización y mapeo (12/2022)")
+st.subheader("🌽 Análisis de Sistematización y Mapeo (12/2022)")
 #_________________________________________________________________
 Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
 all_options = st.checkbox("Todos los territorios")
