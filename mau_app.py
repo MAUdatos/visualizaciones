@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import re
+import matplotlib.pyplot as plt
+from matplotlib_venn import venn2
 #import time   #to add animations of elements e.g. with pyautogui
 
 #__________________________________________________________________________________________________________________________________________________________________
@@ -63,6 +65,7 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
        
+st.text("")
 st.caption('<div style="text-align: left">Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022</h1></div>', unsafe_allow_html=True) 
          
 #st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
@@ -130,6 +133,10 @@ df_bbdd_p = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Hu
 asist_1er   = len(df_bbdd_p[df_bbdd_p['Asistencia 1er Encuentro']=='Sí'])
 asist_2do   = len(df_bbdd_p[df_bbdd_p['Asistencia 2do Encuentro']=='Sí'])
 asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df_bbdd_p['Asistencia 2do Encuentro']=='Sí')])
+
+venn2(subsets = (asist_1er, asist_2do, asist_ambos), set_labels = ('1er Encuentro', '2do Encuentro'))
+st.plotly_chart(plt)
+
 #_____________________________________
 st.subheader('Participación')
 #_____________________________________
@@ -250,11 +257,3 @@ else:
     st.write(df_bbdd_summary.to_html(), unsafe_allow_html=True)
 
     st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
-
-#______________________________
-st.subheader('✨ Oportunidades de mejora')
-#______________________________
-st.write("Comenta tu experiencia con esta aplicación aquí [link](https://forms.gle/fwULxu8f7kdrKDVFA)")
-st.markdown('Con esta información buscamos:\n- 1)Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
-
-
