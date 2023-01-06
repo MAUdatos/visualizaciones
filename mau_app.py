@@ -69,7 +69,7 @@ col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
 
 i = 0
-while i total_inst:
+while i < total_inst:
     col4.metric("Nº Redes sociales",i)
     time.sleep(0.05)
     i = i + 1
