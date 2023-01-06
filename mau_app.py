@@ -32,8 +32,8 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 #__________________________________________________________________________________________________________________________________________________________________
 # General Information for the main page
 #__________________________________________________________________________________________________________________________________________________________________
-# st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
-st.caption('<div style="text-align: left">2023. Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
+# st.caption('Sistematización y Mapeo. Prototipo Web App 1.0 - MAU 2023.')
+st.caption('<div style="text-align: left">Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
 col1, col2, col3, col4 = st.columns((2,0.5,3,4))
 col1.image("logo_mau.png", width=225)
 col3.text("  ")
