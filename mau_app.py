@@ -75,13 +75,13 @@ def dms2dd(s):
         dd*= -1
     return dd
 
-st.write(dms2dd("""0°51'56.29"S"""))
+#st.write(dms2dd("""0°51'56.29"S""")) #it works in streamlit here
 
 #mapping coordinates to a Chilean map - work in progress
 
-df_geo = df_bbdd[['Latitud','Longitud']]
-df_geo = df_geo.replace(['No info'], '')
-df_geo = df_geo.replace(['No Info'], '')
+#df_geo = df_bbdd[['Latitud','Longitud']]
+#df_geo = df_geo.replace(['No info'], '')
+#df_geo = df_geo.replace(['No Info'], '')
 #st.table(df_geo)
 
 #st.write(len(range(df_bbdd))
