@@ -118,7 +118,7 @@ df['lon'] = df['lon'].apply(dms2dd)
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
 df_geo.style.set_caption("Hello World")
 #df_geo.update_geos(fitbounds="locations") #for some reason it wont work now
-col6.caption("Distribución geográfica de las organisaciones")
+col6.caption("Distribución geográfica de las organizaciones")
 col6.map(df_geo)
 st.markdown("""---""")
 
