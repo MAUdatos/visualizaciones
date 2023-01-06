@@ -24,7 +24,7 @@ df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';').dropna(how = 'all'
 df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna(how = 'all') # Expectativas sobre el MAU en formulario del 2do encuentro
 
 # General Information for the main page
-st.caption('Sistematización y Mapeo. Prototipo Web App  1.0, 'align_text='right')
+st.caption('Sistematización y Mapeo. Prototipo Web App  1.0, align_text='right')
 col1, col2, col3, col4 = st.columns((2,0.5,3,3))
 col1.image("logo_mau.png", width=200)
 col3.text("  ")
