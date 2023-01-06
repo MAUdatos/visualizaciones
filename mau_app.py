@@ -31,7 +31,6 @@ col2.text("  ")
 col2.text("  ")
 col2.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 
-
 ### Objetivos
 # Tabs to organize information
 st.header('🍃 Información General MAU') 
