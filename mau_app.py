@@ -5,10 +5,6 @@ import plotly.express as px
 import re
 import time
 
-with st.spinner('Wait for it...'):
-    time.sleep(5)
-st.success('Done!')
-
 #__________________________________________________________________________________________________________________________________________________________________
 # Dashboard structure
 #__________________________________________________________________________________________________________________________________________________________________
@@ -31,6 +27,12 @@ df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';').dropna(how = 'all'
 df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna(how = 'all') # Expectativas sobre el MAU en formulario del 2do encuentro
 
 df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
+
+
+with st.spinner('Wait for it...'):
+    time.sleep(5)
+st.success('Done!')
+
 
 #__________________________________________________________________________________________________________________________________________________________________
 # General Information for the main page
