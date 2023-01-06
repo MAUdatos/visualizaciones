@@ -78,11 +78,12 @@ def dms2dd(s):
     return dd
 
 df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
-df = df_bbdd[['lat','lon']]
+df = df_bbdd[['lat','lon']] #cols must be named lat and lon for map to work - see lib documentation
 df = df[df['lat'] != 'No info']
 df = df[df['lon'] != 'No Info']
 df['lat'] = df['lat'].apply(dms2dd)
 df['lon'] = df['lon'].apply(dms2dd)
+df = df[~(df['lat'] == df['lon'])] #excluding wrong values in the .csv (latitude and longitude same values)
 
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
 st.map(df_geo)
