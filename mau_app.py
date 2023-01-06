@@ -92,8 +92,8 @@ fig = px.treemap(df_tree, path=[px.Constant("Chile"),'Region','Localidad','Organ
 fig.update_traces(root_color="lightgray")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
-col5.caption('Distribución de las Personas representantes por Regiones y Localidades')
-col5.plotly_chart(fig)
+col7.caption('Distribución de las Personas representantes por Regiones y Localidades')
+col7.plotly_chart(fig)
 
 #___________________________________
 # Changing geo coordinates to decimals
@@ -118,8 +118,8 @@ df['lon'] = df['lon'].apply(dms2dd)
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
 df_geo.style.set_caption("Hello World")
 #df_geo.update_geos(fitbounds="locations") #for some reason it wont work now
-col7.caption("Distribución geográfica de las Organizaciones, Huertas y/o Comunidades")
-col7.map(df_geo)
+col5.caption("Distribución geográfica de las Organizaciones, Huertas y/o Comunidades")
+col5.map(df_geo)
 st.markdown("""---""")
 
 #________________________________________________________________________________________________________________________________________________________________
