@@ -31,6 +31,7 @@ col1.image("logo_mau.png", width=225)
 col3.text("  ")
 col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
+st.txt("  ")
 
 ### Objetivos
 # Tabs to organize information
