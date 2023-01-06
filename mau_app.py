@@ -73,7 +73,7 @@ def dms2dd(s):
     # example: s = """0°51'56.29"S"""
     degrees, minutes, seconds, direction = re.split('[°\'"]+', s)
     dd = float(degrees) + float(minutes)/60 + float(seconds)/(60*60);
-    if direction in ('S','W'):
+    if direction in ('S','O'):  #O oeste
         dd*= -1
     return dd
 
@@ -81,7 +81,7 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 df = df_bbdd[['lat','lon']]
 df = df[df['lat'] != 'No info']
 df = df[df['lon'] != 'No Info']
-df['lat']  = df['lat'].apply(dms2dd)
+df['lat'] = df['lat'].apply(dms2dd)
 df['lon'] = df['lon'].apply(dms2dd)
 
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
