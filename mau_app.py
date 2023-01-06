@@ -39,33 +39,6 @@ col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
 
-
-
-progress_bar = st.progress(0)
-status_text = st.empty()
-chart = st.line_chart(np.random.randn(10, 2))
-
-for i in range(100):
-    # Update progress bar.
-    progress_bar.progress(i + 1)
-
-    new_rows = np.random.randn(10, 2)
-
-    # Update status text.
-    status_text.text(
-        'The latest random number is: %s' % new_rows[-1, 1])
-
-    # Append data to the chart.
-    chart.add_rows(new_rows)
-
-    # Pretend we're doing some computation that takes time.
-    time.sleep(0.1)
-
-status_text.text('Done!')
-st.balloons()
-
-
-
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
 #__________________________________________________________________________________________________________________________________________________________________
@@ -90,6 +63,7 @@ total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
 
 col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
+
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
