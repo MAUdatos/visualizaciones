@@ -24,10 +24,11 @@ df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';').dropna(how = 'all'
 df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna(how = 'all') # Expectativas sobre el MAU en formulario del 2do encuentro
 
 # General Information for the main page
-col0, col1, col2, col3 = st.columns((0.5,4,4,0.5))
+st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
+col0, col1, col2, col3 = st.columns((0.5,2,5,0.5))
 col1.image("logo_mau.png", width=200)
 col2.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
-st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
+
 
 ### Objetivos
 # Tabs to organize information
