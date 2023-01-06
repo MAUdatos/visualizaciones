@@ -40,8 +40,9 @@ col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
 
+t = st.empty()
 import pyautogui as p
-st.write(p.type('11111111111111111111111111111111111111111111111111111111111111111111111111'))
+t.write(p.('11111111111111111111111111111111111111111111111111111111111111111111111111',interval = 0.2))
 
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
