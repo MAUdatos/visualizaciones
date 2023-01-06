@@ -66,6 +66,7 @@ col4.metric("Nº Redes sociales",total_inst)
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
 
+@st.cache
 def dms2dd(s):
     # example: s = """0°51'56.29"S"""
     degrees, minutes, seconds, direction = re.split('[°\'"]+', s)
@@ -74,20 +75,22 @@ def dms2dd(s):
         dd*= -1
     return dd
 
+st.write(dms2dd("""0°51'56.29"S"""))
+
 #mapping coordinates to a Chilean map - work in progress
 
 df_geo = df_bbdd[['Latitud','Longitud']]
 df_geo = df_geo.replace(['No info'], '')
 df_geo = df_geo.replace(['No Info'], '')
-st.table(df_geo)
+#st.table(df_geo)
 
-df_geo['Latitud']  = df_geo['Latitud'].apply(dms2dd)
+#df_geo['Latitud']  = df_geo['Latitud'].apply(dms2dd)
 #df_geo['Longitud'] = df_geo['Longitud'].apply(dms2dd)
 #st.write(df_geo)
 #df = pd.DataFrame(df_geo,columns=['Latitud','Longitud'])
 #st.map(df)
 
-st.table(df_geo)
+#st.table(df_geo)
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 st.markdown("""---""")
