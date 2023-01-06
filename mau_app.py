@@ -86,7 +86,7 @@ df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo
 
 fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organización_Huerta_Colectivo'], values = 'Personas', \
                  title = 'Distribución de las Personas representantes por Regiones, Localidades')
-fig.update_traces(root_color="lightgreen")
+fig.update_traces(root_color="lightgray")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
 col5.plotly_chart(fig)
