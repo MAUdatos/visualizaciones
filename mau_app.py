@@ -85,11 +85,11 @@ df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huer
 df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo'])['Nombre_representante'].count()       # aggregating by number of representatives
 df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo']).size().reset_index(name='Personas')   # adding count agg as column
 
-fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organización_Huerta_Colectivo'], values = 'Personas', \
-                 title = 'Distribución de las Personas representantes por Regiones, Localidades')
+fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organización_Huerta_Colectivo'], values = 'Personas')
 fig.update_traces(root_color="lightgray")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
+col5.caption('Distribución de las Personas representantes por Regiones y Localidades)
 col5.plotly_chart(fig)
 
 #___________________________________
