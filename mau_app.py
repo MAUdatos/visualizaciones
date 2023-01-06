@@ -65,6 +65,20 @@ total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
+#___________________________________________________________________________________________________________________________________________________________
+# TREEAMAP - work in progress
+#___________________________________________________________________________________________________________________________________________________________
+df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante'])
+df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo'])['Nombre_representante'].count()       # aggregating by number of representatives
+df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo']).size().reset_index(name='Personas')   # adding count agg as column
+
+fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organización_Huerta_Colectivo'], values = 'Personas')
+fig.update_traces(root_color="lightgreen")
+fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
+#fig.show()   
+st.plotly_chart(fig)
+#___________________________________________________________________________________________________________________________________________________________
+
 
 col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
@@ -202,20 +216,6 @@ df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_rep
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
                                   'Nombre_representante'                         :'Nombre persona representante',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
-#___________________________________________________________________________________________________________________________________________________________
-# TREEAMAP - work in progress
-#___________________________________________________________________________________________________________________________________________________________
-df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante'])
-df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo'])['Nombre_representante'].count()       # aggregating by number of representatives
-df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo']).size().reset_index(name='Personas')   # adding count agg as column
-
-fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organización_Huerta_Colectivo'], values = 'Personas')
-fig.update_traces(root_color="lightgreen")
-fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
-#fig.show()   
-st.plotly_chart(fig)
-
-#___________________________________________________________________________________________________________________________________________________________
 
 if  len(Territorio) == 0:
     st.markdown('Resultados')
