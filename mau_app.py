@@ -84,7 +84,7 @@ df_geo = df_geo.replace(['No info'], '')
 df_geo = df_geo.replace(['No Info'], '')
 #st.table(df_geo)
 
-for i in len(df_bbdd):
+for i in len(range(df_bbdd)):
     print(df_geo.iloc[0][i])
 
 #df_geo['Latitud']  = df_geo['Latitud'].apply(dms2dd)
