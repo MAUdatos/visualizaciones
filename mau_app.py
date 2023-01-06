@@ -52,6 +52,8 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Instagram'].nunique()
 
+st.table(df_bbdd)
+
 col1, col2, col3, col4 = st.columns(4)
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
