@@ -90,15 +90,15 @@ st.header('🌻 Análisis Encuentros MAU')
 
 col0, col1, col2, col3 = st.columns((0.1,1,1,4))
 col1.text("1er Encuentro: 11/2022")
-col2.text("2do Encuentro: 12/2022")
+col1.text("2do Encuentro: 12/2022")
 
 st.subheader('Análisis de expectativas')
 #st.markdown("Análisis de respuestas a preguntas:") 
 
 col0, col1, col2, col3 = st.columns((0.1,1,1,4))
-col1.markdown("1er Encuentro:")
+col1.text("1er Encuentro:")
 col2.markdown("*¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
-col1.markdown("2do Encuentro:")
+col1.text("2do Encuentro:")
 col2.markdown("*¿Qué esperas de una articulación entre huertas urbanas?*")
 
 fuente_expectativa = st.multiselect("Selecciona fuente de información", 
