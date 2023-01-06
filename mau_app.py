@@ -89,8 +89,6 @@ df_geo['Latitud']  = df_geo['Latitud'].apply(dms2dd)
 
 st.table(df_geo)
 
-
-"""
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 st.markdown("""---""")
 
