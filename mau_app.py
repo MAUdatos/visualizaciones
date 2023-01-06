@@ -57,7 +57,7 @@ col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streaml
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
-col4.metric("Nº Redes Sociales",total_inst)
+col4.metric("Nº Redes sociales",total_inst)
 
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
@@ -90,9 +90,9 @@ st.header('🌻 Análisis Encuentros MAU')
 
 col0, col1, col2, col3 = st.columns((0.1,1,1,6))
 col1.text("1er Encuentro:")
-col2.markdown("11/2022")
+col2.text("11/2022")
 col1.text("2do Encuentro:")
-col2.markdown("12/2022")
+col2.text("12/2022")
 
 st.subheader('Análisis de expectativas')
 #st.markdown("Análisis de respuestas a preguntas:") 
@@ -176,6 +176,7 @@ df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miem
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
 total_individuals_f = df_bbdd_filtered['Nombre_representante'].nunique()
 total_localidad_f   = df_bbdd_filtered['Localidad'].nunique()
+total_inst_f        = df_bbdd_filtered['Link redes sociales'].nunique()
 
 df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_representante', \
                                     'Localidad','Relación con la agroecología','Link redes sociales']]
@@ -192,12 +193,12 @@ if  len(Territorio) == 0:
     st.markdown('Resultados')
     st.caption('🥕 No hay información seleccionada')
 else:
-    left_column, middle_column, right_column, empty_column = st.columns(4)
-    with left_column:
-        st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members_f)
-    with middle_column:
-        st.metric("Nº Personas representantes",total_individuals_f)
-    with right_column:
-        st.metric("Nº Territorios identificados",total_localidad_f)
+    col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))
+
+    col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members_f)
+    col2.metric("Nº Personas representantes",total_individuals_f)
+    col3.metric("Nº Territorios identificados",total_localidad_f)
+    col4.metric("Nº Redes sociales",total_inst_f)            
+            
     st.table(df_bbdd_summary)
     st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
