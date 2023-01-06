@@ -63,7 +63,9 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
           
-st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
+st.markdown("<h1 style='text-align: right; color: grey;'>Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022</h1>", unsafe_allow_html=True)
+            
+#st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
 col1, col2, col3, col4,col5 = st.columns((1.5,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
