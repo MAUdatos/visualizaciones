@@ -40,6 +40,9 @@ col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
 
+import pyautogui as p
+st.write(p.type('11111111111111111111111111111111111111111111111111111111111111111111111111'))
+
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
 #__________________________________________________________________________________________________________________________________________________________________
@@ -70,17 +73,16 @@ col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
 col4.metric("Nº Redes sociales",total_inst)
 
-def animate_number(n,anim_time=0.1):
-    t = st.empty()                       #idea adapted from https://discuss.streamlit.io/t/how-to-dynamically-update-a-text-in-a-text-box/12564/3
-    end_of_loop = False 
-    counter = 1
+t = st.empty()                       #idea adapted from https://discuss.streamlit.io/t/how-to-dynamically-update-a-text-in-a-text-box/12564/3
+end_of_loop = False 
+counter = 1
 
-    while (end_of_loop==False):
-        t.write('Counter: ' + str(counter))
-        counter += 1
-        if (counter > n) :
-            end_of_loop = True
-    time.sleep(anim_time)
+while (end_of_loop==False):
+t.write('Counter: ' + str(counter))
+counter += 1
+if (counter > ) :
+end_of_loop = True
+time.sleep(anim_time)
 
 st.write(animate_number(50,0.4))
             
