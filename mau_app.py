@@ -4,7 +4,9 @@ import numpy as np
 import plotly.express as px
 import re
 
+#__________________________________________________________________________________________________________________________________________________________________
 # Dashboard structure
+#__________________________________________________________________________________________________________________________________________________________________
 st.set_page_config(page_title="MAU ", page_icon="🍃", layout="wide")
 
 # Hide index when showing a table. CSS to inject contained in a string
@@ -35,12 +37,13 @@ col3.text("  ")
 col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
-#___________________________
-# Objetivos
-#___________________________
-# Tabs to organize information
+
+#__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
+#__________________________________________________________________________________________________________________________________________________________________
+#______________________________
 st.subheader('Objetivos')
+#______________________________
 tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 with tab1:
     st.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria""") #(MAU 3/12/2022)
@@ -49,12 +52,10 @@ with tab2:
     periurbanos y rurales\n- Recuperar y regenerar los espacios para el aumento de la biodiversidad y el cultivo de alimentos \
     saludables\n- Generar estrategias metodológicas para compartir saberes y experiencias en torno a la agroecología urbana, periurbana y rural")
 st.markdown("""----""")
-#___________________________
-# Mau en números
-#___________________________
-# Key Variables
-st.subheader('MAU en números')
 
+#______________________________
+st.subheader('MAU en números')
+#______________________________
 total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
@@ -197,10 +198,14 @@ df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_rep
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
                                   'Nombre_representante'                         :'Nombre persona representante',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
+#___________________________________________________________________________________________________________________________________________________________
+# TREEAMAP - work in progress
+#___________________________________________________________________________________________________________________________________________________________
 # treemap wip
 # df_bbdd_summary_tree = df_bbdd_summary.by('Nombre Organización, Huerta y/o Colectivo')['Localidad'].nuinque()
 # st.table(df_bbdd_summary_tree.groupby(["Nombre Organización, Huerta y/o Colectivo", "Localidad"])["Nombre persona representante"].count()
 # fig3 = px.treemap()
+#___________________________________________________________________________________________________________________________________________________________
 
 if  len(Territorio) == 0:
     st.markdown('Resultados')
