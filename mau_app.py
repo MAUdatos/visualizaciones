@@ -63,9 +63,9 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
           
-col1, col2, col3, col4,col5 = st.columns((1.5,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
-
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
+
+col1, col2, col3, col4,col5 = st.columns((1.5,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
