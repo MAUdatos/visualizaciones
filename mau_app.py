@@ -23,7 +23,10 @@ df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';').dropna(how = 'all'
 df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';').dropna(how = 'all')             # FODA realizado el segundo encuentro
 df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna(how = 'all') # Expectativas sobre el MAU en formulario del 2do encuentro
 
+df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
+#__________________________________________________________________________________________________________________________________________________________________
 # General Information for the main page
+#__________________________________________________________________________________________________________________________________________________________________
 # st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
 st.caption('<div style="text-align: right">Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
 col1, col2, col3, col4 = st.columns((2,0.5,3,4))
@@ -32,8 +35,9 @@ col3.text("  ")
 col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
-
-### Objetivos
+#___________________________
+# Objetivos
+#___________________________
 # Tabs to organize information
 st.header('🍃 Información General MAU') 
 st.subheader('Objetivos')
@@ -45,9 +49,9 @@ with tab2:
     periurbanos y rurales\n- Recuperar y regenerar los espacios para el aumento de la biodiversidad y el cultivo de alimentos \
     saludables\n- Generar estrategias metodológicas para compartir saberes y experiencias en torno a la agroecología urbana, periurbana y rural")
 st.markdown("""----""")
-
-### Mau en números
-
+#___________________________
+# Mau en números
+#___________________________
 # Key Variables
 st.subheader('MAU en números')
 
@@ -63,13 +67,14 @@ col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
 col4.metric("Nº Redes sociales",total_inst)
 
+st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
+
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
 
-#________________________________________________________________________________________________________________________________________________________________
-# GEO MAPPING
-#________________________________________________________________________________________________________________________________________________________________
-
+#___________________________________
+# Changing coordinates to decimals
+#___________________________________
 @st.cache
 def dms2dd(s):
     # example: s = """0°51'56.29"S"""
@@ -79,7 +84,9 @@ def dms2dd(s):
         dd*= -1
     return dd
 
-df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
+#________________________________________________________________________________________________________________________________________________________________
+# GEO MAPPING - ALL ENTITIES
+#________________________________________________________________________________________________________________________________________________________________
 df = df_bbdd[['lat','lon']].drop_duplicates()
 df = df[df['lat'] != 'No info']
 df = df[df['lon'] != 'No Info']
@@ -89,12 +96,12 @@ df['lon'] = df['lon'].apply(dms2dd)
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
 #df_geo.update_geos(fitbounds="locations") for some reason it wont work now
 st.map(df_geo)
-
-st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
+#
 st.markdown("""---""")
 
-### Expectativas
+#________________________________________________________________________________________________________________________________________________________________
 st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') 
+#________________________________________________________________________________________________________________________________________________________________
 st.subheader('Análisis de expectativas')
 #st.markdown("Análisis de respuestas a preguntas:") 
 
@@ -130,9 +137,10 @@ else:
     with st.expander("Ver detalle"):
             st.table(df_expectativas_s)
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
-
-### Análisis FODA (12/2022)
+            
+#________________________________________
 st.subheader('Análisis FODA (12/2022)')
+#________________________________________
 st.markdown(
 'El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
 espacios que forman el MAU.\nPara ello se consideraron 4 marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.'
@@ -158,8 +166,9 @@ else:
             st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
 st.markdown("""---""")
 
+#_________________________________________________________________
 st.subheader("🌽 Análisis de sistematización y mapeo (12/2022)")
-
+#_________________________________________________________________
 Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
 all_options = st.checkbox("Todos los territorios")
 
