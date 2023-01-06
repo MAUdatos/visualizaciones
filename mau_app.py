@@ -251,3 +251,11 @@ else:
     st.write(df_bbdd_summary.to_html(), unsafe_allow_html=True)
 
     st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
+
+
+#______________________________
+st.subheader('✨ Oportunidades de mejora')
+#______________________________
+st.write("Comenta tu experiencia con esta aplicación aquí [link](https://forms.gle/fwULxu8f7kdrKDVFA)")
+st.markdown('Con esta información buscamos:\n- 1)Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
+
