@@ -52,7 +52,7 @@ total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 
-col_y.left_column, col_y.middle_column, col_y.right_column, col_y.empty_column = col_y.columns(4)
+col_y.left_column, col_y.middle_column, col_y.right_column, col_y.empty_column = st.columns(4)
 with col_y.left_column:
     st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 with col_y.middle_column:
