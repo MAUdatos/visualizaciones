@@ -63,17 +63,19 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
           
-col1, col2, col3, col4 = st.columns((1.5,0.5,4,0.5))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
+col1, col2, col3, col4,col5 = st.columns((1.5,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
-col1.metric("Nº Personas representantes",total_individuals)
-col1.metric("Nº Territorios identificados",total_localidad)
-col1.metric("Nº Redes sociales",total_inst)
+col2.metric("Nº Personas representantes",total_individuals)
+col3.metric("Nº Territorios identificados",total_localidad)
+col4.metric("Nº Redes sociales",total_inst)
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
+
+col5, col6 = st.columns(1,1))
 
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP - work in progress
@@ -87,7 +89,7 @@ fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organiz
 fig.update_traces(root_color="lightgreen")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
-col3.plotly_chart(fig)
+col5.plotly_chart(fig)
 
 #___________________________________
 # Changing coordinates to decimals
@@ -111,7 +113,7 @@ df['lat'] = df['lat'].apply(dms2dd)
 df['lon'] = df['lon'].apply(dms2dd)
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
 #df_geo.update_geos(fitbounds="locations") for some reason it wont work now
-st.map(df_geo)
+col6.map(df_geo)
 #
 st.markdown("""---""")
 
