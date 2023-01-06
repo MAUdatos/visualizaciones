@@ -134,8 +134,8 @@ asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df
 #_____________________________________
 st.subheader('Participación')
 #_____________________________________
+st.markdown('**Asistencia personas a encuentros del MAU**')
 col1, col2, col3, col4 = st.columns((1,1,1,3))
-st.markdown('Asistencia personas a encuentros del MAU')
 col1.metric("1er Encuentro",asist_1er)
 col2.metric("2do Encuentro",asist_2do)
 col3.metric("Ambos Encuentros",asist_ambos) 
