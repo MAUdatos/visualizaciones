@@ -73,19 +73,6 @@ col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
 col4.metric("Nº Redes sociales",total_inst)
 
-t = st.empty()                       #idea adapted from https://discuss.streamlit.io/t/how-to-dynamically-update-a-text-in-a-text-box/12564/3
-end_of_loop = False 
-counter = 1
-
-while (end_of_loop==False):
-t.write('Counter: ' + str(counter))
-counter += 1
-if (counter > ) :
-end_of_loop = True
-time.sleep(anim_time)
-
-st.write(animate_number(50,0.4))
-            
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
 #https://stackoverflow.com/questions/33997361 
