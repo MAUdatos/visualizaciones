@@ -76,17 +76,14 @@ def dms2dd(s):
 
 #mapping coordinates to a Chilean map - work in progress
 
-#df_geo = df_bbdd[['Latitude','Longitude']]
-st.table(df_bbdd)
-"""
+df_geo = df_bbdd[['Latitud','Longitud']]
 df_geo = df_geo.replace(['No info'], '')
 df_geo = df_geo.replace(['No Info'], '')
-df_geo['Latitude']  = df_geo['Latitude'].apply(dms2dd)
-df_geo['Longitude'] = df_geo['Longitude'].apply(dms2dd)
+df_geo['Latitud']  = df_geo['Latitud'].apply(dms2dd)
+df_geo['Longitud'] = df_geo['Longitud'].apply(dms2dd)
 st.write(df_geo)
-df = pd.DataFrame(df_geo,columns=['Latitude','Longitude'])
+df = pd.DataFrame(df_geo,columns=['Latitud','Longitud'])
 st.map(df)
-"""
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 st.markdown("""---""")
