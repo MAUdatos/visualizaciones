@@ -86,8 +86,12 @@ st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 202
 st.markdown("""---""")
 
 ### Expectativas
-st.header('🌻 Análisis Encuentros MAU') #
-st.text("1er Encuentro: 11-2022\n2do Encuentro: 12-2022")
+st.header('🌻 Análisis Encuentros MAU') 
+
+col1, col2, col3 = st.columns((1,1,5))
+col1.text("1er Encuentro: 11-2022")
+col2.text("2do Encuentro: 12-2022")
+
 st.subheader('Expectativas')
 st.markdown("Análisis de respuestas a preguntas:")
 st.markdown("*¿Cuáles serían los objetivos de esta articulación* [Movimiento]? (1er Encuentro)")
