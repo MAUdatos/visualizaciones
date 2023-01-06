@@ -75,7 +75,7 @@ st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 202
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
 
-col5, col6 = st.columns(1,1))
+col5, col6 = st.columns(1,1)
 
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP - work in progress
