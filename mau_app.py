@@ -138,6 +138,7 @@ col1, col2, col3, col4 = st.columns((1,1,1,3))
 col1.metric("Asistencia Personas 1er Encuentro",asist_1er)
 col2.metric("Asistencia Personas 2do Encuentro",asist_2do)
 col3.metric("Personas que asistieron a ambos",asist_ambos) 
+st.markdown("""---""")
 #____________________________________________________
 st.subheader('Análisis de expectativas')
 #____________________________________________________
