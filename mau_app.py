@@ -126,9 +126,9 @@ st.markdown("""---""")
 st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') 
 #________________________________________________________________________________________________________________________________________________________________
 
-asist_1er   = len(df[df['Asistencia 1er Encuentro']=='Sí'])
-asist_2do   = len(df[df['Asistencia 2do Encuentro']=='Sí'])
-asist_ambos = len(df[(df['Asistencia 1er Encuentro']=='Sí') & (df['Asistencia 2do Encuentro']=='Sí')])
+asist_1er   = len(df_bbdd[df_bbdd['Asistencia 1er Encuentro']=='Sí'])
+asist_2do   = len(df_bbdd[df_bbdd['Asistencia 2do Encuentro']=='Sí'])
+asist_ambos = len(df_bbdd[(df_bbdd['Asistencia 1er Encuentro']=='Sí') & (df['Asistencia 2do Encuentro']=='Sí')])
 _____________________________________
 st.subheader('Participación')
 _____________________________________
