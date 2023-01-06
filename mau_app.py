@@ -36,7 +36,7 @@ st.header('🍃 Información General MAU')
 col_x, col_y = st.columns(2)
 
 col_x.subheader('Objetivos')
-col_x.tab1, col_x.tab2 = col_x.tabs(["Objetivo General", "Objetivos Específicos"])
+col_x.tab1, col_x.tab2 = tabs(["Objetivo General", "Objetivos Específicos"])
 with col_x.tab1:
    col_x.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria""") #(MAU 3/12/2022)
 with col_x.tab2:
