@@ -84,7 +84,7 @@ df_geo = df_geo.replace(['No info'], '')
 df_geo = df_geo.replace(['No Info'], '')
 #st.table(df_geo)
 
-st.write(len(range(df_bbdd))
+#st.write(len(range(df_bbdd))
 #for i in len(range(df_bbdd)):
  #   print(df_geo.iloc[0][i])
 
