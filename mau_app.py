@@ -88,9 +88,9 @@ st.markdown("""---""")
 ### Expectativas
 st.header('🌻 Análisis Encuentros MAU') 
 
-col1, col2, col3 = st.columns((1,1,5))
-col1.text("1er Encuentro: 11-2022")
-col2.text("2do Encuentro: 12-2022")
+col1, col2, col3 = st.columns((1,1,4))
+col1.text("1er Encuentro: 11/2022")
+col2.text("2do Encuentro: 12/2022")
 
 st.subheader('Expectativas')
 st.markdown("Análisis de respuestas a preguntas:")
