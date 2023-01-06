@@ -33,32 +33,35 @@ st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
 # Tabs to organize information
 st.header('🍃 Información General MAU') 
 
-col_x, col_y = st.columns(2)
+col1, col2 = st.columns(2)
 
-col_x.subheader('Objetivos')
-col_x.tab1, col_x.tab2 = col_x.tabs(["Objetivo General", "Objetivos Específicos"])
-with col_x.tab1:
-   st.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria""") #(MAU 3/12/2022)
-with col_x.tab2:
-   st.markdown("- Generar redes de apoyo para potenciar el intercambio de saberes, experiencias y recursos entre organizaciones y territorios urbanos, \
+with col1:
+    st.subheader('Objetivos')
+    tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
+    with tab1:
+        st.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria""") #(MAU 3/12/2022)
+    with tab2:
+        st.markdown("- Generar redes de apoyo para potenciar el intercambio de saberes, experiencias y recursos entre organizaciones y territorios urbanos, \
                 periurbanos y rurales\n- Recuperar y regenerar los espacios para el aumento de la biodiversidad y el cultivo de alimentos \
                 saludables\n- Generar estrategias metodológicas para compartir saberes y experiencias en torno a la agroecología urbana, periurbana y rural")
-col_x.markdown("""----""")
+    st.markdown("""----""")
 
 ### Mau en números
-col_y.subheader('MAU en números')
+
 # Key Variables
 total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 
-col_y.left_column, col_y.middle_column, col_y.right_column, col_y.empty_column = st.columns(4)
-with col_y.left_column:
-    st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
-with col_y.middle_column:
-    st.metric("Nº Personas representantes",total_individuals)
-with col_y.right_column:
-    st.metric("Nº Territorios identificados",total_localidad)
+with col2:
+    st.subheader('MAU en números')
+    left_column, middle_column, right_column, empty_column = st.columns(4)
+    with left_column:
+        st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
+    with middle_column:
+        st.metric("Nº Personas representantes",total_individuals)
+    with right_column:
+        st.metric("Nº Territorios identificados",total_localidad)
 
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
@@ -70,23 +73,6 @@ def dms2dd(s):
     if direction in ('S','W'):
         dd*= -1
     return dd
-
-tab1, tab2 = st.tabs(["tab1", "tab2"])
-
-with tab1:
-    col1, col2 = st.columns(2)
-    with col1:
-        st.selectbox("City", ["City1", "City2"])
-    with col2:
-        st.selectbox("District", ["District1", "District2"])
-
-with tab2:
-    col1, col2 = st.columns(2)
-    with col1:
-        st.selectbox("Another City", ["Another_City1", "Another_City2"])
-    with col2:
-        st.selectbox("Another District", ["Another_District1", "Another_District2"])
-
 
 #mapping coordinates to a Chilean map - work in progress
 
