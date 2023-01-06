@@ -26,8 +26,8 @@ df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna
 # General Information for the main page
 # st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
 st.caption('<div style="text-align: right">Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
-col1, col2, col3, col4 = st.columns((2,0.5,3,3))
-col1.image("logo_mau.png", width=200)
+col1, col2, col3, col4 = st.columns((2,0.5,3,4))
+col1.image("logo_mau.png", width=250)
 col3.text("  ")
 col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
