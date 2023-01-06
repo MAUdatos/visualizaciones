@@ -28,8 +28,7 @@ st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
 col1, col2, col3, col4 = st.columns((2,3,0.5,2))
 col2.text("  ")
 col2.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
-col5.image("logo_mau.png", width=200)
-
+col4.image("logo_mau.png", width=200)
 
 ### Objetivos
 # Tabs to organize information
