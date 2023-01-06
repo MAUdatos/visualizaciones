@@ -66,9 +66,9 @@ total_inst        = df_bbdd['Link redes sociales'].nunique()
 col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
-col2.metric("Nº Personas representantes",total_individuals)
-col3.metric("Nº Territorios identificados",total_localidad)
-col4.metric("Nº Redes sociales",total_inst)
+col1.metric("Nº Personas representantes",total_individuals)
+col1.metric("Nº Territorios identificados",total_localidad)
+col1.metric("Nº Redes sociales",total_inst)
 
 st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
