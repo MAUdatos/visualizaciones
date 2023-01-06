@@ -32,7 +32,7 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 # General Information for the main page
 #__________________________________________________________________________________________________________________________________________________________________
 # st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
-st.caption('<div style="text-align: right">2023. Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
+st.caption('<div style="text-align: left">2023. Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
 col1, col2, col3, col4 = st.columns((2,0.5,3,4))
 col1.image("logo_mau.png", width=225)
 col3.text("  ")
@@ -63,7 +63,7 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
        
-st.caption('<div style="text-align: right">Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022</h1></div>', unsafe_allow_html=True) 
+st.caption('<div style="text-align: left">Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022</h1></div>', unsafe_allow_html=True) 
          
 #st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
