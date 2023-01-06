@@ -78,7 +78,7 @@ def dms2dd(s):
     return dd
 
 df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
-df = df_bbdd[['Localidad', 'Region','lat','lon']].drop_duplicates()
+df = df_bbdd[['lat','lon']].drop_duplicates()
 df = df[df['lat'] != 'No info']
 df = df[df['lon'] != 'No Info']
 df['lat'] = df['lat'].apply(dms2dd)
