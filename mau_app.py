@@ -50,14 +50,14 @@ st.subheader('MAU en números')
 total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
+total_inst        = df_bbdd['Instagram'].nunique()
 
-left_column, middle_column, right_column, empty_column = st.columns(4)
-with left_column:
-    st.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
-with middle_column:
-    st.metric("Nº Personas representantes",total_individuals)
-with right_column:
-    st.metric("Nº Territorios identificados",total_localidad)
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
+col2.metric("Nº Personas representantes",total_individuals)
+col3.metric("Nº Territorios identificados",total_localidad)
+col4.metric("Nº Cuentas Instagram",total_inst))
 
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
