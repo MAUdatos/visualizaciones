@@ -31,7 +31,7 @@ st.caption('Sistematización y Mapeo. Prototipo Web App  1.0')
 
 # Tabs to organize information
 st.header('🍃 Información General MAU') 
-st.subheader('Objetivos')
+#st.subheader('Objetivos')
 tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 with tab1:
    st.markdown("""- Desarrollar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria""") #(MAU 3/12/2022)
