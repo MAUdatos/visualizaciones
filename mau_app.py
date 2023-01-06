@@ -39,6 +39,22 @@ col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
 
+
+t = st.empty()
+end_of_loop = False 
+counter = 1
+
+while (end_of_loop==False):
+    t.write('Counter: ' + str(counter))
+    if (counter % 10 ==0) :
+        t = st.empty()
+
+    counter += 1
+    if (counter > 100) :
+        end_of_loop = True
+
+    time.sleep(0.2)
+
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
 #__________________________________________________________________________________________________________________________________________________________________
