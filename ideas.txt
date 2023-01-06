@@ -1,3 +1,5 @@
 1. Nest columns within the webpage to optimize the view - https://github.com/joy13975/streamlit-nested-layout/blob/main/demo.py
 2. More customization for geo maps - https://geemap.org/workshops/Crop_Mapping_2022/#using-earth-engine
-
+3. Adding Table of Contents - https://github.com/epogrebnyak/streamlit-demo/blob/98ca0b490f297c9428e78af7fb8ac7ab9309d548/streamlit_app.py#L210-L312
+4. Wrapping strings in the sunburst visuals - link in the code
+5. Adjusting the hover functionality (to show more or less or different data, like description of a concept) - link in the code
