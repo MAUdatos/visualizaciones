@@ -17,19 +17,16 @@ hide_table_row_index = """
             tbody th {display:none}
             </style>
             """
-
 # Inject CSS with Markdown
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 # data
-
 df_bbdd =         pd.read_csv('mau_bbdd01012023.csv',sep=';').dropna(how = 'all')             # Base de datos consolidada (1er y 2do encuentro)
 df_foda =         pd.read_csv('FODA2doencuentro.csv',sep=';').dropna(how = 'all')             # FODA realizado el segundo encuentro
 df_expectativas = pd.read_csv('expectativas2doencuentro2022.csv',sep=';').dropna(how = 'all') # Expectativas sobre el MAU en formulario del 2do encuentro
 
 df_bbdd = df_bbdd.sort_values(by=['Organización_Huerta_Colectivo', 'Nombre_representante'])
-
-df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
+df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)  #obligatory names for the map
 
 #__________________________________________________________________________________________________________________________________________________________________
 # General Information for the main page
@@ -66,6 +63,17 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
 
+left_container = st.container()
+right_container = st.container()
+
+left_container, right_container = st.columns(1.5,1)
+
+with left_container:
+    st.text('dfdf df df df df df d f)
+with right_container:
+        st.text('dfdf df df df df df d ffddcfdfdf)
+               
+
 col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
@@ -77,6 +85,7 @@ st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 202
 
 #https://stackoverflow.com/questions/33997361 
 #https://stackoverflow.com/questions/50193159/converting-pandas-data-frame-with-degree-minute-second-dms-coordinates-to-deci
+
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP - work in progress
 #___________________________________________________________________________________________________________________________________________________________
