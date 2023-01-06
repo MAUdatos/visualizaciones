@@ -63,7 +63,7 @@ total_individuals = df_bbdd['Nombre_representante'].nunique()
 total_localidad   = df_bbdd['Localidad'].nunique()
 total_inst        = df_bbdd['Link redes sociales'].nunique()
           
-col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
+col1, col2, col3, col4 = st.columns((1.5,0.5,4,0.5))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col1.metric("Nº Personas representantes",total_individuals)
@@ -87,7 +87,7 @@ fig = px.treemap(df_tree, path=[px.Constant("MAU"),'Region','Localidad','Organiz
 fig.update_traces(root_color="lightgreen")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
-col5.plotly_chart(fig)
+col3.plotly_chart(fig)
 
 #___________________________________
 # Changing coordinates to decimals
