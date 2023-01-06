@@ -71,6 +71,23 @@ def dms2dd(s):
         dd*= -1
     return dd
 
+tab1, tab2 = st.tabs(["tab1", "tab2"])
+
+with tab1:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.selectbox("City", ["City1", "City2"])
+    with col2:
+        st.selectbox("District", ["District1", "District2"])
+
+with tab2:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.selectbox("Another City", ["Another_City1", "Another_City2"])
+    with col2:
+        st.selectbox("Another District", ["Another_District1", "Another_District2"])
+
+
 #mapping coordinates to a Chilean map - work in progress
 
 #cast tp map
