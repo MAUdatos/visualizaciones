@@ -130,9 +130,9 @@ df_bbdd_p = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Hu
 asist_1er   = len(df_bbdd_p[df_bbdd_p['Asistencia 1er Encuentro']=='Sí'])
 asist_2do   = len(df_bbdd_p[df_bbdd_p['Asistencia 2do Encuentro']=='Sí'])
 asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df_bbdd_p['Asistencia 2do Encuentro']=='Sí')])
-_____________________________________
+#_____________________________________
 st.subheader('Participación')
-_____________________________________
+#_____________________________________
 col1, col2, col3, col4,col5 = st.columns((1.6,1,1,3))
 
 col1.metric("Asistencia Personas 1er Encuentro",asist_1er)
