@@ -66,13 +66,15 @@ total_inst        = df_bbdd['Link redes sociales'].nunique()
 left_container = st.container()
 right_container = st.container()
 
-left_container, right_container = st.columns(1.5,1)
+colA, colB = st.columns(1.5,1)
 
-with left_container:
-    st.text('dfdf df df df df df d f')
-with right_container:
+with colA:
+    with left_container:
+        st.text('dfdf df df df df df d f')
+with colB:
+    with right_container:
         st.text('dfdf df df df df df d ffddcfdfdf')
-               
+              
 
 col1, col2, col3, col4, col5 = st.columns((1.5,1,1,1,2))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
