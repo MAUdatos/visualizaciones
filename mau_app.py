@@ -133,7 +133,7 @@ asist_1er   = len(df_bbdd_p[df_bbdd_p['Asistencia 1er Encuentro']=='Sí'])
 asist_2do   = len(df_bbdd_p[df_bbdd_p['Asistencia 2do Encuentro']=='Sí'])
 asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df_bbdd_p['Asistencia 2do Encuentro']=='Sí')])
 
-col1, col2, col3, col4 = st.columns((1,1,1,3))
+col1, col2, col3 = st.columns((1,1,3))
 #_____________________________________
 col1.subheader('Participación')
 #_____________________________________
@@ -142,8 +142,9 @@ col1.metric("1er Encuentro",asist_1er)
 col1.metric("2do Encuentro",asist_2do)
 col1.metric("Ambos Encuentros",asist_ambos) 
 st.markdown("""---""")
-col4.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 10 Palabras más frecuentes.')
-col4.table(wa.f.iloc[:10])
+#col4.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 10 Palabras más frecuentes.')
+#col4.table(wa.f.iloc[:10])
+col3.image("wordcloud_2doencuentro.png, width=700)
 
 col1, col2, col3 = st.columns((5,1,5))
 
