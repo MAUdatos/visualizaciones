@@ -143,70 +143,60 @@ col2.metric("2do Encuentro",asist_2do)
 col3.metric("Ambos Encuentros",asist_ambos) 
 st.markdown("""---""")
 
-#col1, col2, col3
+col1, col2, col3 = st.columns((5,1,5))
 
-#____________________________________________________
-st.subheader('Análisis de Expectativas')
-#____________________________________________________
-col0, col1, col2, col3 = st.columns((0.1,1,6,1))
+with col1:
+    #____________________________________________________
+    st.subheader('Análisis de Expectativas')
+    #____________________________________________________
+    st.markdown("1er Encuentro: *¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
+    st.markdown("2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
 
-col1.markdown("1er Encuentro:")
-col1.markdown("2do Encuentro:")
-col2.markdown("*¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
-col2.markdown("*¿Qué esperas de una articulación entre huertas urbanas?*")
+    #Multiselector for source of information regarding expectations (1r and 2d Meeting)
+    fuente_expectativa = st.multiselect("Selecciona fuente de información", options=df_expectativas["Fuente"].unique(),)  
+    all_options = st.checkbox("Ambos encuentros")
 
-fuente_expectativa = st.multiselect("Selecciona fuente de información", 
-                                    options=df_expectativas["Fuente"].unique(),)  #Multiselector for source of information regarding expectations (1r and 2d Meeting)
-                                    #default=df_expectativas["Fuente"].unique())
-all_options = st.checkbox("Ambos encuentros")
-
-if all_options:
-    fuente_expectativa = df_expectativas["Fuente"].unique().tolist()
+    if all_options:
+        fuente_expectativa = df_expectativas["Fuente"].unique().tolist()
             
-df_expectativas_fuente = df_expectativas.query('Fuente == @fuente_expectativa')  #Filter by source of information
+    df_expectativas_fuente = df_expectativas.query('Fuente == @fuente_expectativa')  #Filter by source of information
+    expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas_fuente["Dimensión"].unique(),)
+    df_expectativas_s = df_expectativas_fuente.query('Dimensión == @expectativas_s')
+    fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión','Indicador','Expectativa'],values = None)  
 
-expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas_fuente["Dimensión"].unique(),)
-
-df_expectativas_s = df_expectativas_fuente.query('Dimensión == @expectativas_s')
-
-fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión','Indicador','Expectativa'],values = None)  
-
-if  len(expectativas_s) == 0:
-    st.markdown('Resultados:')
-    st.caption(' 🥕 No hay información seleccionada')
-else:   
-    st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')    
-    st.plotly_chart(fig1)                 #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus avoid hover
-    with st.expander("Ver detalle"):
+    if  len(expectativas_s) == 0:
+        st.markdown('Resultados:')
+        st.caption(' 🥕 No hay información seleccionada')
+    else:   
+        st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')    
+        st.plotly_chart(fig1)                 #wrapping can be improved on -> https://github.com/plotly/plotly.py/issues/2527 plus avoid hover
+        with st.expander("Ver detalle"):
             st.table(df_expectativas_s)
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
-            
-#________________________________________
-st.subheader('Análisis FODA (12/2022)')
-#________________________________________
-st.markdown(
-'El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
-espacios que forman el MAU.\nPara ello se consideraron 4 marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.'
-)
 
-foda_s = st.multiselect("Selecciona marco de análisis", options=df_foda["Tipo"].unique(),)
+with col3:
+     #________________________________________
+     st.subheader('Análisis FODA (12/2022)')
+     #________________________________________
+     st.markdown(
+     'El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
+     espacios que forman el MAU.\nPara ello se consideraron 4 marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.)
+     foda_s = st.multiselect("Selecciona marco de análisis", options=df_foda["Tipo"].unique(),)
+     df_foda_s = df_foda.query('Tipo == @foda_s')
+     df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
+     df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
 
-df_foda_s = df_foda.query('Tipo == @foda_s')
+     fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
 
-df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
-df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
-
-fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
-
-if  len(foda_s) == 0:
-    st.markdown('Resultados:')
-    st.caption('🥕 No hay información seleccionada')
-else:
-    st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')
-    st.plotly_chart(fig2)
-    with st.expander("Ver detalle"):
-            st.table(df_foda_summary)
-            st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
+     if  len(foda_s) == 0:
+        st.markdown('Resultados:')
+        st.caption('🥕 No hay información seleccionada')
+     else:
+        st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')
+        st.plotly_chart(fig2)
+        with st.expander("Ver detalle"):
+                st.table(df_foda_summary)
+                st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
 st.markdown("""---""")
 
 #_________________________________________________________________
