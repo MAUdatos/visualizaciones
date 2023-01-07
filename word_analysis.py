@@ -115,14 +115,14 @@ freq_dic = []
 
 exclusion_list = ['con','que','de','la','lo','una','uno','sin','etc','donde','info','hace','para','desde','soy','los','las','por','fue','fueron','algo','por','ser','mis','cada','era','ahí','fui','entre','esto','esta','así','mas','más','lxs','del'\
 'tengo','través','san','vamos','angamos','del', 'par', 'fau', 'mst', 'nos', 'vez', 'unxs', 'cómo', 'como', 'hago', 'matta', 'usach', 'aucca', 'vamos','eres','par','mucho','todas','todos', 'domo','san','joaquin', 'estos','varios','varios','jgm'\
-                'tres','dos','cuatro','luego','llevo','sobre','y','una', 'vario', 'también','tenido','recoleta','ñuñoa']
+                'tres','dos','cuatro','luego','llevo','sobre','y','una', 'vario', 'también','tenido','recoleta','ñuñoa','florida']
 
 for words in frequency_list:
         if words not in exclusion_list:    #review the exclusions
             freq_dic.append([words, frequency[words],round(100*frequency[words]/all_words,2)])
             
-dff = pd.DataFrame(freq_dic, columns = ['word', 'ocurrence','share%'])
+dff = pd.DataFrame(freq_dic, columns = ['palabra', 'ocurrencia','%'])
 dff = dff.sort_values(by="ocurrence", ascending = False)
 
-f = dff.set_index('word').reset_index().fillna(0)
-f = f.sort_values(by = 'share%', ascending = False)
+f = dff.set_index('palabra').reset_index().fillna(0)
+f = f.sort_values(by = '%', ascending = False)
