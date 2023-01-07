@@ -142,6 +142,9 @@ col1.metric("1er Encuentro",asist_1er)
 col2.metric("2do Encuentro",asist_2do)
 col3.metric("Ambos Encuentros",asist_ambos) 
 st.markdown("""---""")
+
+col1, col2, col3
+
 #____________________________________________________
 st.subheader('Análisis de Expectativas')
 #____________________________________________________
@@ -231,7 +234,7 @@ with col1:
 
 with col3:
     st.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 10 Palabras más frecuentes.')
-    st.table(wa.f.iloc[:9])
+    st.table(wa.f.iloc[:10])
             
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
