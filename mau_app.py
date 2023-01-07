@@ -4,6 +4,7 @@ import numpy as np
 import plotly.express as px
 import re
 import word_analysis as wa
+from wordcloud import WordCloud
 
 #__________________________________________________________________________________________________________________________________________________________________
 # Dashboard structure
@@ -229,7 +230,6 @@ with col1:
     df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
 
 with col2:
-    from wordcloud import WordCloud
     d = {w: wa.f for w, wa.f in zip(wa.f['word'],wa.f['share%'])}
     wordcloud = WordCloud(background_color='turquoise', colormap='inferno', prefer_horizontal=1)
     wordcloud.generate_from_frequencies(frequencies=d)
