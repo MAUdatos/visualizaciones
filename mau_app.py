@@ -86,7 +86,7 @@ col5, col6, col7 = st.columns((8,1,10))
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP
 #___________________________________________________________________________________________________________________________________________________________
-df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo']).unique()
+df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo'])
 df_tree = df_tree.groupby(['Region','Localidad'])['Organización_Huerta_Colectivo'].count()                             # aggregating by number of orgs
 df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo']).size().reset_index(name='Personas')   # adding count agg as column
 
