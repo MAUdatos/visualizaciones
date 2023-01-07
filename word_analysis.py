@@ -6,7 +6,8 @@ import plotly.express as px
 pd.set_option("display.max_columns", None)
 pd.set_option('display.max_rows', None)
 
-df = pd.read_csv('data.csv',sep=';').dropna(how = 'all') # Base de datos consolidada (1er y 2do encuentro)
+df = pd.read_csv('mau_bbdd01012023.csv',sep=';').dropna(how = 'all') # Base de datos consolidada (1er y 2do encuentro)
+
 text = ' '.join(df['Relación con la agroecología']).lower()
 
 new = re.sub('amos ', 'ar ', text)
