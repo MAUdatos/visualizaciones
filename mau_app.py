@@ -208,22 +208,36 @@ st.markdown("""---""")
 #_________________________________________________________________
 st.subheader("🌽 Análisis de Sistematización y Mapeo (12/2022)")
 #_________________________________________________________________
-Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
-all_options = st.checkbox("Todos los territorios")
 
-if all_options:
-    Territorio = df_bbdd["Localidad"].unique().tolist()
+col1, col2 = st.columns((4,1))
 
-df_bbdd_by_ter = df_bbdd.query('Localidad == @Territorio')
+with col1:
+    Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
+    all_options = st.checkbox("Todos los territorios")
 
-miembros = st.multiselect("Organización, Huerta o Colectivo",options=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique(),default=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique())
-all_options = st.checkbox("Todas")
+    if all_options:
+        Territorio = df_bbdd["Localidad"].unique().tolist()
 
-if all_options:
-    miembros = df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique().tolist()
+    df_bbdd_by_ter = df_bbdd.query('Localidad == @Territorio')
 
-df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
+    miembros = st.multiselect("Organización, Huerta o Colectivo",options=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique(),default=df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique())
+    all_options = st.checkbox("Todas")
 
+    if all_options:
+        miembros = df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique().tolist()
+
+    df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
+
+with col2:
+    from wordcloud import WordCloud
+    d = {w: wa.f. for w, wa.f in zip(wa.f['word'],wa.f['share%'])}
+    wordcloud = WordCloud(background_color='turquoise', colormap='inferno', prefer_horizontal=1)
+    wordcloud.generate_from_frequencies(frequencies=d)
+    plt.imshow(wordcloud)
+    plt.axis('off')
+    plt.title(" Most frequent words in opened questions (Selection) \n Main goals | Member screening methods ",fontsize=12, y =1.07, wrap=True)
+    st.pyplot()
+            
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
 total_individuals_f = df_bbdd_filtered['Nombre_representante'].nunique()
