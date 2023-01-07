@@ -69,7 +69,7 @@ st.text("")
 
 #st.caption("Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022")
 
-col1, col2, col3, col4, col5 = st.columns((1.6,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
+col1, col2, col3, col4, col5 = st.columns((1.4,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
 col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
@@ -153,7 +153,7 @@ with col1:
     st.markdown("2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
 
     #Multiselector for source of information regarding expectations (1r and 2d Meeting)
-    str.text(" ")
+    st.text(" ")
     fuente_expectativa = st.multiselect("Selecciona fuente de información", options=df_expectativas["Fuente"].unique(),)  
     all_options = st.checkbox("Ambos encuentros")
 
