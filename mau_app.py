@@ -71,7 +71,7 @@ st.text("")
 
 col1, col2, col3, col4, col5 = st.columns((1.4,1,1,1,3))   #https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
-col1.metric("Nº Organizaciones, Huertas y/o Comunidades",total_members)
+col1.metric("Nº Organizaciones/Huertas/Comunidades",total_members)
 col2.metric("Nº Personas representantes",total_individuals)
 col3.metric("Nº Territorios identificados",total_localidad)
 col4.metric("Nº Redes sociales",total_inst)
@@ -86,15 +86,15 @@ col5, col6, col7 = st.columns((8,1,10))
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP
 #___________________________________________________________________________________________________________________________________________________________
-df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante'])
-df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo'])['Nombre_representante'].count()       # aggregating by number of representatives
+df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo']).unique()
+df_tree = df_tree.groupby(['Region','Localidad'])['Organización_Huerta_Colectivo''].count()       # aggregating by number of representatives
 df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo']).size().reset_index(name='Personas')   # adding count agg as column
 
 fig = px.treemap(df_tree, path=[px.Constant("Chile"),'Region','Localidad','Organización_Huerta_Colectivo'], values = 'Personas')
 fig.update_traces(root_color="lightgray")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
-col7.caption('Distribución de las Personas representantes por Regiones y Localidades')
+col7.caption('Distribución de Organizaciones/Huertas/Comunidades por Regiones y Localidades')
 col7.plotly_chart(fig)
 
 #___________________________________
