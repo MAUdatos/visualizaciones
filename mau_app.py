@@ -133,15 +133,17 @@ asist_1er   = len(df_bbdd_p[df_bbdd_p['Asistencia 1er Encuentro']=='Sí'])
 asist_2do   = len(df_bbdd_p[df_bbdd_p['Asistencia 2do Encuentro']=='Sí'])
 asist_ambos = len(df_bbdd_p[(df_bbdd_p['Asistencia 1er Encuentro']=='Sí') & (df_bbdd_p['Asistencia 2do Encuentro']=='Sí')])
 
-#_____________________________________
-st.subheader('Participación')
-#_____________________________________
-st.markdown('**Asistencia personas a encuentros del MAU**')
 col1, col2, col3, col4 = st.columns((1,1,1,3))
+#_____________________________________
+col1.subheader('Participación')
+#_____________________________________
+col1.markdown('**Asistencia personas a encuentros del MAU**')
 col1.metric("1er Encuentro",asist_1er)
 col2.metric("2do Encuentro",asist_2do)
 col3.metric("Ambos Encuentros",asist_ambos) 
 st.markdown("""---""")
+col4.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 10 Palabras más frecuentes.')
+col4.table(wa.f.iloc[:10])
 
 col1, col2, col3 = st.columns((5,1,5))
 
@@ -204,7 +206,7 @@ st.markdown("""---""")
 st.subheader("🌽 Análisis de Sistematización y Mapeo (12/2022)")
 #_________________________________________________________________
 
-col1, col2, col3 = st.columns((3,1,1))
+col1, col2 = st.columns((1,1))
 
 with col1:
     Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
@@ -222,10 +224,6 @@ with col1:
         miembros = df_bbdd_by_ter["Organización_Huerta_Colectivo"].unique().tolist()
 
     df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
-
-with col3:
-    st.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 10 Palabras más frecuentes.')
-    st.table(wa.f.iloc[:10])
             
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
