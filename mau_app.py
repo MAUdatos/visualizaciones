@@ -144,7 +144,9 @@ col1.metric("Ambos Encuentros",asist_ambos)
 st.markdown("""---""")
 #col4.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 10 Palabras más frecuentes.')
 #col4.table(wa.f.iloc[:10])
-col3.image("wordcloud_2doencuentro.png, width=700)
+
+col3.markdown('**Análisis de la relación con la agroecología (12/2022)**')
+col3.image("wordcloud_2doencuentro.png', width=700)
 
 col1, col2, col3 = st.columns((5,1,5))
 
