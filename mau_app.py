@@ -175,20 +175,20 @@ with col1:
             st.caption('Fuente: Formulario de participación en 2do Encuentro MAU (3/12/2022)')
 
 with col3:
-     #________________________________________
-     st.subheader('Análisis FODA (12/2022)')
-     #________________________________________
-     st.markdown(
-     'El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
-     espacios que forman el MAU.\nPara ello se consideraron 4 marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.)
-     foda_s = st.multiselect("Selecciona marco de análisis", options=df_foda["Tipo"].unique(),)
-     df_foda_s = df_foda.query('Tipo == @foda_s')
-     df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
-     df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
+    #________________________________________
+    st.subheader('Análisis FODA (12/2022)')
+    #________________________________________
+    st.markdown(
+    'El análisis FODA es una herramienta de investigación participativa que permitió identificar características comunes entre los diferentes \
+    espacios que forman el MAU.\nPara ello se consideraron 4 marcos de análisis: Debilidades, Amenazas, Fortalezas y Oportunidades.')
+    foda_s = st.multiselect("Selecciona marco de análisis", options=df_foda["Tipo"].unique(),)
+    df_foda_s = df_foda.query('Tipo == @foda_s')
+    df_foda_summary = df_foda_s[['Tipo','Transcripción','Clasificación Específica','Clasificación Agrupada']]
+    df_foda_summary.rename(columns = {'Tipo':'Dimensión',}, inplace = True)
 
-     fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
+    fig2 = px.sunburst(data_frame = df_foda_s,path = ['Tipo', 'Clasificación Agrupada', 'Clasificación Específica', 'Transcripción'],values = None)  
 
-     if  len(foda_s) == 0:
+    if  len(foda_s) == 0:
         st.markdown('Resultados:')
         st.caption('🥕 No hay información seleccionada')
      else:
