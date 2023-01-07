@@ -230,7 +230,8 @@ with col1:
     df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
 
 with col2:
-    st.table(wa.f.iloc[:10])
+    st.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 15 Palabras más frecuentes.')
+    st.table(wa.f.iloc[:14])
             
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
