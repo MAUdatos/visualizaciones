@@ -230,10 +230,7 @@ with col1:
     df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
 
 with col2:
-    plt.imshow(wa.wordcloud)
-    plt.axis('off')
-    plt.title(" Most frequent words in opened questions (Selection) \n Main goals | Member screening methods ",fontsize=12, y =1.07, wrap=True)
-    st.pyplot()
+    st.table(wa.f)
             
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
@@ -247,7 +244,6 @@ df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_rep
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
                                   'Nombre_representante'                         :'Nombre persona representante',
                                   'Link redes sociales'                          :'Instagram',},  inplace = True)
-
 if  len(Territorio) == 0:
     st.markdown('Resultados')
     st.caption('🥕 No hay información seleccionada')
