@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import re
 import plotly.express as px
+from wordcloud import WordCloud
 
 pd.set_option("display.max_columns", None)
 pd.set_option('display.max_rows', None)
@@ -120,3 +121,7 @@ dff = dff.sort_values(by="ocurrence", ascending = False)
 
 f = dff.set_index('word').reset_index().fillna(0)
 f = f.sort_values(by = 'share%', ascending = False)
+
+d = {w: wa.f for w, wa.f in zip(wa.f['word'],wa.f['share%'])}
+wordcloud = WordCloud(background_color='turquoise', colormap='inferno', prefer_horizontal=1)
+wordcloud.generate_from_frequencies(frequencies=d)
