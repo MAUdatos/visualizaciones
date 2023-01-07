@@ -94,6 +94,8 @@ new = re.sub('gunos', 'guno', text)
 text = new
 new = re.sub('intos', 'into', text)
 text = new
+new = re.sub('ando ', 'ar ', text)
+text = new
 
 frequency = {}    
 match_pattern= re.findall(r'[a-zóíéáúüôñàîïý]{3,20}', text)
@@ -109,7 +111,7 @@ freq_dic = []
 
 exclusion_list = ['con','que','de','la','lo','una','uno','sin','etc','donde','info','hace','para','desde','soy','los','las','por','fue','fueron','algo','por','ser','mis','cada','era','ahí','fui','entre','esto','esta','así','mas','más','lxs','del'\
 'tengo','través','san','vamos','angamos','del', 'par', 'fau', 'mst', 'nos', 'vez', 'unxs', 'cómo', 'como', 'hago', 'matta', 'usach', 'aucca', 'vamos','eres','par','mucho','todas','todos', 'domo','san','joaquin', 'estos','varios','varios','jgm'\
-                'tres','dos','cuatro','luego','llevo','sobre','y','una']
+                'tres','dos','cuatro','luego','llevo','sobre','y','una', 'vario', 'también','tenido']
 
 for words in frequency_list:
         if words not in exclusion_list:    #review the exclusions
