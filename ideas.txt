@@ -8,6 +8,7 @@ PROGRAMACION
 6. Agregar el numero de personas que participaron en 1. 2. y ambos encuentros.
 7. Usar diagramas de Venn para la participacion en los encuentros de MAU
 8. Contrastar expectativas/resultados de los dos encuentros entre si
+9. Use not only multiselect but also st.checkbox('text')
 
 ORGANIZACION
 1. Se podria completar informacion que falta en los datos (tabla bbdd) tomando contacto con las personas representantes, en varios casos hay telefono de contacto o red social.
