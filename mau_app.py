@@ -153,6 +153,7 @@ with col1:
     st.markdown("2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
 
     #Multiselector for source of information regarding expectations (1r and 2d Meeting)
+    str.text(" ")
     fuente_expectativa = st.multiselect("Selecciona fuente de información", options=df_expectativas["Fuente"].unique(),)  
     all_options = st.checkbox("Ambos encuentros")
 
