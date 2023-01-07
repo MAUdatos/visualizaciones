@@ -191,12 +191,12 @@ with col3:
     if  len(foda_s) == 0:
         st.markdown('Resultados:')
         st.caption('🥕 No hay información seleccionada')
-     else:
+    else:
         st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')
         st.plotly_chart(fig2)
         with st.expander("Ver detalle"):
-                st.table(df_foda_summary)
-                st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
+            st.table(df_foda_summary)
+            st.caption('Fuente: Metodología Participativa, 2do Encuentro MAU (3/12/2022)')
 st.markdown("""---""")
 
 #_________________________________________________________________
