@@ -86,11 +86,11 @@ col5, col6, col7 = st.columns((8,1,10))
 #___________________________________________________________________________________________________________________________________________________________
 # TREEAMAP
 #___________________________________________________________________________________________________________________________________________________________
-df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo'])
-df_tree = df_tree.groupby(['Region','Localidad'])['Organización_Huerta_Colectivo'].count()                             # aggregating by number of orgs
-df_tree = df_tree.groupby(['Region','Localidad', 'Organización_Huerta_Colectivo']).size().reset_index(name='Organizaciones')   # adding count agg as column
+df_tree = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante'])
+df_tree = df_tree.groupby(['Region','Localidad','Organización_Huerta_Colectivo'])['Nombre_representante'].count()              # aggregating by number of persons
+df_tree = df_tree.groupby(['Region','Localidad','Organización_Huerta_Colectivo']).size().reset_index(name='Personas')   # adding count agg as column
 
-fig = px.treemap(df_tree, path=[px.Constant("Chile"),'Region','Localidad'], values = 'Organizaciones')
+fig = px.treemap(df_tree, path=[px.Constant("Chile"),'Region','Localidad'], values = 'Personas')
 fig.update_traces(root_color="lightgray")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
