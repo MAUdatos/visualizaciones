@@ -45,7 +45,7 @@ st.markdown("  ")
 st.header('🍃 Información General MAU') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______________________________
-st.subheader('Objetivos')
+st.subheader('Datos Globales')
 #______________________________
 tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 with tab1:
