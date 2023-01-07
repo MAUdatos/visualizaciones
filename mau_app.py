@@ -148,7 +148,7 @@ st.markdown("""---""")
 col3.markdown('**Análisis de la relación con la agroecología (12/2022)**')
 col3.image('wordcloud_2doencuentro.png', width=700)
 
-col1, col2, col3 = st.columns((5,1,5))
+col1, col2, col3 = st.columns((6,1,6))
 
 with col1:
     #____________________________________________________
@@ -159,14 +159,14 @@ with col1:
 
     #Multiselector for source of information regarding expectations (1r and 2d Meeting)
     st.text(" ")
-    fuente_expectativa = st.multiselect("Selecciona fuente de información", options=df_expectativas["Fuente"].unique(),)  
+    fuente_expectativa = col1.multiselect("Selecciona fuente de información", options=df_expectativas["Fuente"].unique(),)  
     all_options = st.checkbox("Ambos encuentros")
 
     if all_options:
         fuente_expectativa = df_expectativas["Fuente"].unique().tolist()
             
     df_expectativas_fuente = df_expectativas.query('Fuente == @fuente_expectativa')  #Filter by source of information
-    expectativas_s = st.multiselect("Selecciona tematica", options=df_expectativas_fuente["Dimensión"].unique(),)
+    expectativas_s = col1.multiselect("Selecciona tematica", options=df_expectativas_fuente["Dimensión"].unique(),)
     df_expectativas_s = df_expectativas_fuente.query('Dimensión == @expectativas_s')
     fig1 = px.sunburst(data_frame = df_expectativas_s, path = ['Dimensión','Indicador','Expectativa'],values = None)  
 
