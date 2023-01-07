@@ -143,7 +143,7 @@ col2.metric("2do Encuentro",asist_2do)
 col3.metric("Ambos Encuentros",asist_ambos) 
 st.markdown("""---""")
 
-col1, col2, col3
+#col1, col2, col3
 
 #____________________________________________________
 st.subheader('Análisis de Expectativas')
