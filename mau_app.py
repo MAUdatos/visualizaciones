@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import matplotlib.pyplot as plt
 import re
 import word_analysis as wa
 
@@ -229,7 +230,10 @@ with col1:
     df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
 
 with col2:
-    st.text("")   
+    plt.imshow(wa.wordcloud)
+    plt.axis('off')
+    plt.title(" Most frequent words in opened questions (Selection) \n Main goals | Member screening methods ",fontsize=12, y =1.07, wrap=True)
+    st.pyplot()
             
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
