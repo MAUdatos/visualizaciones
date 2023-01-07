@@ -125,4 +125,4 @@ dff = pd.DataFrame(freq_dic, columns = ['word', 'ocurrence','share%'])
 dff = dff.sort_values(by="ocurrence", ascending = False)
 
 f = dff.set_index('word').reset_index().fillna(0)
-f = f.sort_values(by = 'word', ascending = False)
+f = f.sort_values(by = 'share%', ascending = False)
