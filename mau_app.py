@@ -45,7 +45,7 @@ st.markdown("  ")
 st.header('🍃 Información General MAU') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______________________________
-st.subheader('Datos Globales')
+st.subheader('Objetivos')
 #______________________________
 tab1, tab2 = st.tabs(["Objetivo General", "Objetivos Específicos"])
 with tab1:
@@ -57,7 +57,7 @@ with tab2:
 st.markdown("""----""")
 
 #______________________________
-st.subheader('MAU en Números')
+st.subheader('Datos Globales')
 #______________________________
 total_members     = df_bbdd['Organización_Huerta_Colectivo'].nunique()
 total_individuals = df_bbdd['Nombre_representante'].nunique()
