@@ -210,7 +210,7 @@ st.markdown("""---""")
 st.subheader("🌽 Análisis de Sistematización y Mapeo (12/2022)")
 #_________________________________________________________________
 
-col1, col2 = st.columns((4,1))
+col1, col,2 col3 = st.columns((3,1,1))
 
 with col1:
     Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
@@ -229,9 +229,9 @@ with col1:
 
     df_bbdd_filtered = df_bbdd_by_ter.query('Organización_Huerta_Colectivo == @miembros')
 
-with col2:
-    st.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 15 Palabras más frecuentes.')
-    st.table(wa.f.iloc[:14])
+with col3:
+    st.caption('Análisis todas las respuestas a la pregunta *Relación con la agroecología*: 10 Palabras más frecuentes.')
+    st.table(wa.f.iloc[:9])
             
 # Key Variables filtered
 total_members_f     = df_bbdd_filtered['Organización_Huerta_Colectivo'].nunique()
