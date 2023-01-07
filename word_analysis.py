@@ -122,7 +122,7 @@ for words in frequency_list:
             freq_dic.append([words, frequency[words],round(100*frequency[words]/all_words,2)])
             
 dff = pd.DataFrame(freq_dic, columns = ['palabra', 'ocurrencia','%'])
-dff = dff.sort_values(by="ocurrence", ascending = False)
+dff = dff.sort_values(by="ocurrencia", ascending = False)
 
 f = dff.set_index('palabra').reset_index().fillna(0)
 f = f.sort_values(by = '%', ascending = False)
