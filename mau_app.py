@@ -40,19 +40,6 @@ col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
 st.markdown("  ")
 
-st.table(wa.f)
-
-#from wordcloud import WordCloud
-
-#d = {w: f for w, f in zip(f['word'],f['share%'])}
-
-#wordcloud = WordCloud(background_color='turquoise', colormap='inferno', prefer_horizontal=1)
-#wordcloud.generate_from_frequencies(frequencies=d)
-#plt.imshow(wordcloud)
-#plt.axis('off')
-#plt.title(" Most frequent words in opened questions (Selection) \n Main goals | Member screening methods ",fontsize=12, y =1.07, wrap=True)
-#plt.show()
-
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
 #__________________________________________________________________________________________________________________________________________________________________
