@@ -210,7 +210,7 @@ st.markdown("""---""")
 st.subheader("🌽 Análisis de Sistematización y Mapeo (12/2022)")
 #_________________________________________________________________
 
-col1, col,2 col3 = st.columns((3,1,1))
+col1, col2, col3 = st.columns((3,1,1))
 
 with col1:
     Territorio = st.multiselect("Territorio", options=df_bbdd["Localidad"].unique(),) 
