@@ -96,6 +96,8 @@ new = re.sub('intos', 'into', text)
 text = new
 new = re.sub('ando ', 'ar ', text)
 text = new
+new = re.sub('trabajar', 'trabajo', text)
+text = new
 
 frequency = {}    
 match_pattern= re.findall(r'[a-zóíéáúüôñàîïý]{3,20}', text)
@@ -121,4 +123,4 @@ dff = pd.DataFrame(freq_dic, columns = ['word', 'ocurrence','share%'])
 dff = dff.sort_values(by="ocurrence", ascending = False)
 
 f = dff.set_index('word').reset_index().fillna(0)
-f = f.sort_values(by = 'share%', ascending = False)
+f = f.sort_values(by = 'word', ascending = False)
