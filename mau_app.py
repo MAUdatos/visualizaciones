@@ -230,7 +230,7 @@ with col1:
 
 with col2:
     from wordcloud import WordCloud
-    d = {w: wa.f. for w, wa.f in zip(wa.f['word'],wa.f['share%'])}
+    d = {w: wa.f for w, wa.f in zip(wa.f['word'],wa.f['share%'])}
     wordcloud = WordCloud(background_color='turquoise', colormap='inferno', prefer_horizontal=1)
     wordcloud.generate_from_frequencies(frequencies=d)
     plt.imshow(wordcloud)
