@@ -119,7 +119,7 @@ exclusion_list = ['con','que','de','la','lo','una','uno','sin','etc','donde','in
 
 for words in frequency_list:
         if words not in exclusion_list:    #review the exclusions
-            freq_dic.append([words, frequency[words],round(100*frequency[words]/all_words,0)])
+            freq_dic.append([words, frequency[words],round(100*frequency[words]/all_words,1)])
             
 dff = pd.DataFrame(freq_dic, columns = ['palabra', 'ocurrencia','%'])
 dff = dff.sort_values(by="ocurrencia", ascending = False)
