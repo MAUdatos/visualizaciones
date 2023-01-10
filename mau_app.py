@@ -32,7 +32,7 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 #__________________________________________________________________________________________________________________________________________________________________
 # General Information for the main page
 #__________________________________________________________________________________________________________________________________________________________________
-st.caption('Grupo de trabajo: "Sistematización y Mapeo". Prototipo Web App 1.0 MAU 2023.')
+st.caption('Prototipo Web App 1.0 MAU 2023. Grupo de trabajo: "Sistematización y Mapeo".')
 #st.caption('<div style="text-align: left">Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
 
 col1, col2, col3, col4 = st.columns((2,0.5,3,4))
@@ -56,7 +56,7 @@ st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 -
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 with st.expander("Leer más"):
     #st.image("Summary_Metrics_R2R_Framework.png")
-    st.markdown('text')
+    st.markdown('*¿Qué es el Prototipo Web App 1.0 - MAU 2023?*\nEs un prototipo de aplicación web que permite analizar, mapear y visualizar información sistematizada del MAU.')
 
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
