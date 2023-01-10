@@ -52,8 +52,8 @@ st.markdown('<div style="text-align: justify;">El Prototipo Web App 1.0 - MAU 20
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 st.markdown('<div style="text-align: justify;">Le invitamos a explorar este prototipo y a interactuar con las opciones de búsqueda, filtros, análisis, mapas y visualizaciones. Al final, en el apartado llamado “oportunidades de mejora”, le agradecemos que pueda responder un breve cuestionario. Con él buscamos responder a lo siguiente: </div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
-st.markdown('<div style="text-align: justify;">"- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n3)Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU".</div>', unsafe_allow_html=True) ##Espacio Texto
-
+st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
+st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 with st.expander("Leer más"):
     #st.image("Summary_Metrics_R2R_Framework.png")
     st.markdown('text')
