@@ -33,10 +33,10 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 # General Information for the main page
 #__________________________________________________________________________________________________________________________________________________________________
 st.caption('Grupo de trabajo: "Sistematización y Mapeo". Prototipo Web App 1.0 MAU 2023.')
-st.caption('<div style="text-align: left">Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
+#st.caption('<div style="text-align: left">Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
 
 col1, col2, col3, col4 = st.columns((2,0.5,3,4))
-col1.image("logo_mau.png", width=225)
+col1.image("logo_mau.png", width=200)
 col3.text("  ")
 col3.text("  ")
 col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
@@ -275,9 +275,9 @@ else:
 
 st.markdown("""---""")
 #______________________________
-st.subheader('✨ Oportunidades de mejora 🌼🐝')
+st.subheader('✨ Oportunidades de mejora 🌼 🐝')
 #______________________________
 st.write("Comenta tu experiencia con esta aplicación [aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
 st.markdown('Con su información buscamos:\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
-st.markdown('Muchas gracias 🌱')
+st.markdown('De antemano, muchas gracias.\nEquipo de sistematización y mapeo – MAU\nEnero 2023')
 st.markdown("""----""")
