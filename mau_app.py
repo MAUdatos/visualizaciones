@@ -62,7 +62,7 @@ with st.expander("Leer más detalles sobre el proceso de diseño y construcción
     st.markdown("Toda la información sistematizada de los dos primeros encuentros del MAU realizados en noviembre y diciembre 2022.")
    
     st.markdown("**¿Cómo trabajamos la información?**")
-    st.markdown("La información de este piolto no se divulga públicamente y solo es utilizada para el diseño de este prototipo dentro de red interna del MAU. La información se presenta a nivel de nombre de organización y no a nivel de personas individuales. Todo esto con el fin de asegurar un uso respetuoso de los datos. ")
+    st.markdown("La información aquí presentada no se divulga públicamente y solo es utilizada para el diseño de este prototipo dentro de red interna del MAU. La información se presenta a nivel de nombre de organización y no a nivel de personas individuales. Todo esto con el fin de asegurar un uso respetuoso de los datos. ")
 
     st.markdown("**¿Cómo lo hicimos?**")
     st.markdown("Co-diseño entre personas del grupo de trabajo “Sistematización y mapeo”. Para construcción se utilizó lenguaje de programación Python y otras herramientas de código abierto. Todo desde un repositorio en Github asociado al MAU.")
