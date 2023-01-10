@@ -234,7 +234,7 @@ total_individuals_f = df_bbdd_filtered['Nombre_representante'].nunique()
 total_localidad_f   = df_bbdd_filtered['Localidad'].nunique()
 total_inst_f        = df_bbdd_filtered['Link redes sociales'].nunique()
 
-df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo','Nombre_representante', \
+df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo', \
                                     'Localidad','Relación con la agroecología','Link redes sociales']]
 
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
