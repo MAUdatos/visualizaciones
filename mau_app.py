@@ -55,7 +55,7 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 with st.expander("Leer más detalles sobre el proceso de diseño y construcción de esta aplicación web"):
-    st.markdown("**¿Qué es el Prototipo Web App 1.0 - MAU 2023?** \n- Es un prototipo de aplicación web que permite analizar, mapear y visualizar información sistematizada del MAU.')
+    st.markdown("**¿Qué es el Prototipo Web App 1.0 - MAU 2023?** \n- Es un prototipo de aplicación web que permite analizar, mapear y visualizar información sistematizada del MAU.")
 
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General MAU') 
