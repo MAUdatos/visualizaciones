@@ -289,9 +289,9 @@ else:
 
 st.markdown("""---""")
 #______________________________
-st.subheader('✨ Oportunidades de mejora 🌼 🐝')
+st.subheader('✨ Oportunidades de mejora 🌼  ¿Qué te pareció esta app? 🐝')
 #______________________________
-st.write("Comenta tu experiencia con esta aplicación [aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
+st.markdown("Comenta tu experiencia con esta aplicación [aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
 st.markdown('Con su información buscamos:\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
 st.markdown('De antemano, muchas gracias.\nEquipo de sistematización y mapeo – MAU\nEnero 2023')
 st.markdown("""----""")
