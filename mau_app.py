@@ -282,18 +282,16 @@ else:
     col4.metric("Nº Redes sociales",total_inst_f)            
             
     #st.write(df_bbdd_summary['Nombre Organización, Huerta y/o Colectivo'].unique())
-    st.caption('Información general de las Organizaciones, Huertas y/o Colectivo en el territorio seleccionado*.')
+    st.markdown('Información general de las Organizaciones, Huertas y/o Colectivo en el territorio seleccionado*.')
     st.write(df_bbdd_summary.to_html(), unsafe_allow_html=True)
-
     st.caption('*Se espera que aquí se visualice información de las organizaciones, huertas y/o colectivos en el MAU que tenga carácter público y que contribuyan positivamente a los objetivos del MAU')
-
     st.caption('Fuente de la información: Formularios de participación en 1er y 2do Encuentro MAU 2022')
 
 st.markdown("""---""")
 #______________________________
 st.subheader('✨ Oportunidades de mejora 🌼  ¿Qué te pareció esta app? 🐝')
 #______________________________
-st.markdown("**Comenta tu experiencia con esta aplicación [aquí]**(https://forms.gle/fwULxu8f7kdrKDVFA)")
+st.markdown("Comenta tu experiencia con esta aplicación[aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
 st.markdown('Con su información buscamos:\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
 st.markdown('De antemano, muchas gracias.\nEquipo de sistematización y mapeo – MAU\nEnero 2023')
 st.markdown("""----""")
