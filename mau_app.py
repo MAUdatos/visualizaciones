@@ -269,8 +269,7 @@ df_bbdd_summary = df_bbdd_filtered[['Organización_Huerta_Colectivo', \
                                     'Localidad','Relación con la agroecología','Link redes sociales']]
 
 df_bbdd_summary.rename(columns = {'Organización_Huerta_Colectivo'                :'Nombre Organización, Huerta y/o Colectivo',
-                                  'Nombre_representante'                         :'Nombre persona representante',
-                                  'Link redes sociales'                          :'Instagram',},  inplace = True)
+                                  'Nombre_representante'                         :'Nombre persona representante',},  inplace = True)
 if  len(Territorio) == 0:
     st.markdown('Resultados')
     st.caption('🥕 No hay información seleccionada')
@@ -282,12 +281,13 @@ else:
     col3.metric("Nº Territorios identificados",total_localidad_f)
     col4.metric("Nº Redes sociales",total_inst_f)            
             
-    st.write(df_bbdd_summary['Nombre Organización, Huerta y/o Colectivo'].unique())
-    st.write(df_bbdd_summary)
+    #st.write(df_bbdd_summary['Nombre Organización, Huerta y/o Colectivo'].unique())
+    st.caption('Información general de las Organizaciones, Huertas y/o Colectivo en el territorio seleccionado*.')
+    st.write(df_bbdd_summary.to_html(), unsafe_allow_html=True)
 
-    #st.write(df_bbdd_summary.to_html(), unsafe_allow_html=True)
+    st.caption('*Se espera que aquí se visualice información de las organizaciones, huertas y/o colectivos en el MAU que tenga carácter público y que contribuyan positivamente a los objetivos del MAU')
 
-    st.caption('Fuente: Formularios de participación en 1er y 2do Encuentro MAU 2022')
+    st.caption('Fuente de la información: Formularios de participación en 1er y 2do Encuentro MAU 2022')
 
 st.markdown("""---""")
 #______________________________
