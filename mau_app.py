@@ -237,7 +237,7 @@ with col3:
 st.markdown("""---""")
 
 #_________________________________________________________________
-st.subheader("🌽 Análisis de Sistematización y Mapeo (12/2022)")
+st.subheader("🌽 Análisis de Sistematización y Mapeo")
 #_________________________________________________________________
 
 col1, col2 = st.columns((1,1))
