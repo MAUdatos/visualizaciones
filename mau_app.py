@@ -282,7 +282,8 @@ else:
     col3.metric("Nº Territorios identificados",total_localidad_f)
     col4.metric("Nº Redes sociales",total_inst_f)            
             
-    st.table(df_bbdd_summary['Nombre Organización, Huerta y/o Colectivo'].unique())
+    st.write(df_bbdd_summary['Nombre Organización, Huerta y/o Colectivo'].unique())
+    st.write(df_bbdd_summary)
 
     #st.write(df_bbdd_summary.to_html(), unsafe_allow_html=True)
 
