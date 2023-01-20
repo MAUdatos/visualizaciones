@@ -291,7 +291,7 @@ st.markdown("""---""")
 #______________________________
 st.subheader('✨🌼 Formulario de retroalimentación 🐝✨')
 #______________________________
-st.markdown("[Comenta tu experiencia con esta aplicación respondiendo el formulario de retroalimentación aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
-st.markdown('Con su información buscamos:\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
+st.markdown("[Comparte tu visión y experiencia con esta Web App respondiendo al formulario de retroalimentación aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
+st.markdown('Las preguntas ahí ayudaran a :\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
 st.markdown('De antemano, muchas gracias.\nEquipo de sistematización y mapeo – MAU\nEnero 2023')
 st.markdown("""----""")
