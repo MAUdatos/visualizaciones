@@ -32,19 +32,20 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 #__________________________________________________________________________________________________________________________________________________________________
 # General Information for the main page
 #__________________________________________________________________________________________________________________________________________________________________
-st.caption('Prototipo Web App 1.0 MAU 2023. Grupo de trabajo: "Sistematización y Mapeo".')
+#st.caption('Prototipo Web App 1.0 MAU 2023. Grupo de trabajo: "Sistematización y Mapeo".')
 #st.caption('<div style="text-align: left">Sistematización y Mapeo. Prototipo Web App  1.0</div>', unsafe_allow_html=True)          
 
-col1, col2, col3, col4 = st.columns((2,0.5,3,4))
-col1.image("logo_mau.png", width=200)
-col3.text("  ")
-col3.text("  ")
-col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
-st.markdown("  ")
+#col1, col2, col3, col4 = st.columns((2,0.5,3,4))
+#col1.image("logo_mau.png", width=200)
+#col3.text("  ")
+#col3.text("  ")
+#col3.subheader("Red de cooperación mutua que fomenta, reivindica y defiende el oficio de la agroecología en pro de la soberanía alimentaria")
+#st.markdown("  ")
 
+st.image("headermau2023.png")
 
 #__________________________________________________________________________________________________________________________________________________________________
-st.header('🌽 Mensaje de bienvenida al Prototipo Web App 1.0 MAU 2023') 
+st.header('🌽 Mensaje de bienvenida ✨') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True)
@@ -73,7 +74,7 @@ with st.expander("Leer más detalles sobre el proceso de diseño y construcción
 
 
 #__________________________________________________________________________________________________________________________________________________________________
-st.header('🍃 Información General MAU') 
+st.header('🍃 Información General MAU ✨') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______________________________
 st.subheader('Objetivos')
@@ -156,7 +157,7 @@ col5.map(df_geo)
 st.markdown("""---""")
 
 #________________________________________________________________________________________________________________________________________________________________
-st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022)') 
+st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022) ✨') 
 #________________________________________________________________________________________________________________________________________________________________
 
 df_bbdd_p = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante','Asistencia 1er Encuentro','Asistencia 2do Encuentro'])
@@ -237,7 +238,7 @@ with col3:
 st.markdown("""---""")
 
 #_________________________________________________________________
-st.subheader("🌽 Análisis de Sistematización y Mapeo")
+st.subheader("🌽 Análisis de Sistematización y Mapeo ✨")
 #_________________________________________________________________
 
 col1, col2 = st.columns((1,1))
