@@ -50,7 +50,7 @@ st.header('🌽 Mensaje de bienvenida al Prototipo Web App 1.0 MAU 2023')
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">El Prototipo Web App 1.0 - MAU 2023 es el primer resultado del grupo de trabajo “Sistematización y Mapeo”. Con él se busca avanzar hacia un modelo confiable de sistematización y mapeo de las organizaciones, huertas y/o comunidades que son parte del MAU, con el fin de unir y potenciar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
-st.markdown('<div style="text-align: justify;">Le invitamos a explorar este prototipo y a interactuar con las opciones de búsqueda, filtros, análisis, mapas y visualizaciones. Al final, en el apartado llamado *oportunidades de mejora*, le agradecemos que pueda responder un breve **formulario de retroalimentación** que será de mucha ayuda para el MAU.</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">Le invitamos a explorar este prototipo y a interactuar con las opciones de búsqueda, filtros, análisis, mapas y visualizaciones. Al final le agradecemos que pueda responder un breve formulario de retroalimentación que será de mucha ayuda para el futuro de esta iniciativa.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 #st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
@@ -289,9 +289,9 @@ else:
 
 st.markdown("""---""")
 #______________________________
-st.subheader('✨ Oportunidades de mejora 🌼 Formulario de retroalimentación 🐝')
+st.subheader('✨🌼 Formulario de retroalimentación 🐝✨')
 #______________________________
-st.markdown("Comenta tu experiencia con esta aplicación respondiendo el formulario de retroalimentación [aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
+st.markdown("[Comenta tu experiencia con esta aplicación respondiendo el formulario de retroalimentación aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
 st.markdown('Con su información buscamos:\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
 st.markdown('De antemano, muchas gracias.\nEquipo de sistematización y mapeo – MAU\nEnero 2023')
 st.markdown("""----""")
