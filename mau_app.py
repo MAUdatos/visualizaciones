@@ -191,8 +191,10 @@ with col1:
     #____________________________________________________
     st.subheader('Análisis de Expectativas')
     #____________________________________________________
-    st.markdown("1er Encuentro: *¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
-    st.markdown("2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
+   
+    st.markdown('En los primeros dos encuentros del MAU 2022 se abrieron preguntas acerca de las expectativas sobre el MAU.\nAquí se presenta una herramienta analítica que nos permite explorar estas respuestas.')
+    st.caption("1er Encuentro: *¿Cuáles serían los objetivos de esta articulación* [Movimiento]?")
+    st.caption("2do Encuentro: *¿Qué esperas de una articulación entre huertas urbanas?*")
 
     #Multiselector for source of information regarding expectations (1r and 2d Meeting)
     st.text(" ")
@@ -245,6 +247,7 @@ st.markdown("""---""")
 #_________________________________________________________________
 st.subheader("🌽 Análisis de Sistematización y Mapeo ✨")
 #_________________________________________________________________
+st.markdown('Aquí podra conocer a las organizaciones, huertas y colectivos que forman la red del MAU. La información se organiza por territorios')
 
 col1, col2 = st.columns((1,1))
 
