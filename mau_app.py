@@ -181,9 +181,10 @@ st.markdown("""---""")
 #col4.table(wa.f.iloc[:10])
 
 col3.subheader('Análisis de la relación con la agroecología (12/2022)')
-col3.caption('Este gráfico se construye partir de las respuestas del formulario de inscripción destacando con tamaños más grandes las palabras que más se repitieron. Aquí se pueden reconocer claves de aquello que nos relaciona con la agroecología.')
+col3.caption('Este gráfico se construye partir de las respuestas del formulario de inscripción destacando con tamaños más grandes las palabras que más se repitieron.')
+col3.caption('Aquí, por ejemplo, se puede reconocer algunas claves de lo que nos relaciona con la agroecología.')
 col3.image('wordcloud_2doencuentro.png', width=700)
-col3.caption('En esta nube de palabras se puede reconocer algunas claves de lo que nos relaciona con la agroecología.')
+
 
 col1, col2, col3 = st.columns((6,1,6))
 
