@@ -182,7 +182,7 @@ st.markdown("""---""")
 
 col3.subheader('Análisis de la relación con la agroecología (12/2022)')
 col3.caption('Este gráfico se construye partir de las respuestas del formulario de inscripción destacando con tamaños más grandes las palabras que más se repitieron.')
-col3.caption('Aquí, por ejemplo, se puede reconocer algunas claves de lo que nos relaciona con la agroecología.')
+#col3.caption('Aquí, por ejemplo, se puede reconocer algunas claves de lo que nos relaciona con la agroecología.')
 col3.image('wordcloud_2doencuentro.png', width=700)
 
 
