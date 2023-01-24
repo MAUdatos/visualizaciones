@@ -248,7 +248,8 @@ st.markdown("""---""")
 #_________________________________________________________________
 st.subheader("🌽 Análisis de Sistematización y Mapeo ✨")
 #_________________________________________________________________
-st.markdown('Aquí podra conocer a las organizaciones, huertas y colectivos que forman la red del MAU. La información se organiza por territorios')
+st.markdown('Aquí podra conocer a las organizaciones, huertas y colectivos que forman la red del MAU. La información se organiza por territorios. ')
+#st.caption('')
 
 col1, col2 = st.columns((1,1))
 
