@@ -126,7 +126,8 @@ fig = px.treemap(df_tree, path=[px.Constant("Chile"),'Region','Localidad'], valu
 fig.update_traces(root_color="lightgray")
 fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
 #fig.show()   
-col7.caption('Distribución de Organizaciones/Huertas/Comunidades por Regiones y Localidades')
+col7.markdown('Distribución de Organizaciones/Huertas/Comunidades por Regiones y Localidades')
+col7.caption('Explore el siguiente gráfico interactivo seleccionando alguna categoría de interés.')
 col7.plotly_chart(fig)
 
 #___________________________________
@@ -152,7 +153,8 @@ df['lon'] = df['lon'].apply(dms2dd)
 df_geo = pd.DataFrame(df,columns=['lat','lon'])
 df_geo.style.set_caption("Hello World")
 #df_geo.update_geos(fitbounds="locations") #for some reason it wont work now
-col5.caption("Distribución geográfica de las Organizaciones, Huertas y/o Comunidades")
+col5.markdown("Distribución geográfica de las Organizaciones, Huertas y/o Comunidades")
+col5.caption('Explore el siguiente mapa de huertas y organizaciones del MAU. Puede hacer acercar y alejar la imagen del mapa segun su interés.')
 col5.map(df_geo)
 st.markdown("""---""")
 
@@ -178,6 +180,7 @@ st.markdown("""---""")
 #col4.table(wa.f.iloc[:10])
 
 col3.subheader('Análisis de la relación con la agroecología (12/2022)')
+col3.caption('Aquí la nube de palabras que permite reconocer claves de aquelo que nos relaciona con la agroecología.')
 col3.image('wordcloud_2doencuentro.png', width=700)
 
 col1, col2, col3 = st.columns((6,1,6))
@@ -230,7 +233,7 @@ with col3:
         st.markdown('Resultados:')
         st.caption('🥕 No hay información seleccionada')
     else:
-        st.caption('Explora las respuestas interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')
+        st.caption('Explora las respuestas del FODA interactuando con el gráfico solar. Puedes partir por seleccionar tu dimensión de interés.')
         st.plotly_chart(fig2)
         with st.expander("Ver detalle"):
             st.table(df_foda_summary)
