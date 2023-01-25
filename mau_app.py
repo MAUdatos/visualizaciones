@@ -52,8 +52,15 @@ st.header('🌽 Mensaje de bienvenida ✨')
 
 #video_file = open('https://youtube.com/shorts/Jtnyad76H0c?feature=share', 'rb')
 #video_bytes = video_file.read()
-st.video('https://youtube.com/shorts/Jtnyad76H0c?feature=share')
+st.video('https://www.youtube.com/shorts/Jtnyad76H0c')
 
+with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+
+st.download_button(label="Descarga la presentación de detallada aquí", 
+      data=PDFbyte,
+      file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
+      mime='application/octet-stream')
 
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">El Prototipo Web App 1.0 - MAU 2023 es el primer resultado del grupo de trabajo “Sistematización y Mapeo”. Con él se busca avanzar hacia un modelo confiable de sistematización y mapeo de las organizaciones, huertas y/o comunidades que son parte del MAU, con el fin de unir y potenciar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria.</div>', unsafe_allow_html=True)
@@ -62,15 +69,6 @@ st.markdown('<div style="text-align: justify;">Le invitamos a explorar este prot
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 #st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
-
-with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-
-st.download_button(label="Para más información descarga la presentación de detallada aquí", 
-      data=PDFbyte,
-      file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
-      mime='application/octet-stream')
-
 
 #with st.expander("Leer más detalles sobre el proceso de diseño y construcción de esta aplicación web"):
 #    st.markdown("**¿Qué es el Prototipo Web App 1.0 - MAU 2023?**")     
