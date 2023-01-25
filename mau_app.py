@@ -66,6 +66,7 @@ col3.markdown("[![Foo](https://raw.githubusercontent.com/MAUdatos/visualizacione
 #      file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
 #      mime='application/octet-stream')
 
+st.markdown('Descripción general')
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">El Prototipo Web App 1.0 - MAU 2023 es el primer resultado del grupo de trabajo “Sistematización y Mapeo”. Con él se busca avanzar hacia un modelo confiable de sistematización y mapeo de las organizaciones, huertas y/o comunidades que son parte del MAU, con el fin de unir y potenciar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
@@ -74,22 +75,21 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 #st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 
-#with st.expander("Leer más detalles sobre el proceso de diseño y construcción de esta aplicación web"):
-#    st.markdown("**¿Qué es el Prototipo Web App 1.0 - MAU 2023?**")     
-#    st.markdown("Es un prototipo de aplicación web que permite analizar, mapear y visualizar información sistematizada del MAU.")
+with st.expander("Conocer más"):
+    st.markdown("**¿Qué es el Prototipo Web App 1.0 - MAU 2023?**")     
+    st.markdown("Es un prototipo de aplicación web que permite analizar, mapear y visualizar información sistematizada del MAU.")
     
-#    st.markdown("**¿Qué información es utilizada?**")
-#    st.markdown("Toda la información sistematizada de los dos primeros encuentros del MAU realizados en noviembre y diciembre 2022.")
+    st.markdown("**¿Qué información es utilizada?**")
+    st.markdown("Toda la información sistematizada de los dos primeros encuentros del MAU realizados en noviembre y diciembre 2022.")
    
-#    st.markdown("**¿Cómo trabajamos la información?**")
-#    st.markdown("La información aquí presentada no se divulga públicamente y solo es utilizada para el diseño de este prototipo dentro de red interna del MAU. La información se presenta a nivel de nombre de organización y no a nivel de personas individuales. Todo esto con el fin de asegurar un uso respetuoso de los datos. ")
+    st.markdown("**¿Cómo trabajamos la información?**")
+    st.markdown("La información aquí presentada no se divulga públicamente y solo es utilizada para el diseño de este prototipo dentro de red interna del MAU. La información se presenta a nivel de nombre de organización y no a nivel de personas individuales. Todo esto con el fin de asegurar un uso respetuoso de los datos. ")
 
-#    st.markdown("**¿Cómo lo hicimos?**")
-#    st.markdown("Co-diseño entre personas del grupo de trabajo “Sistematización y mapeo”. Para construcción se utilizó lenguaje de programación Python y otras herramientas de código abierto. Todo desde un repositorio en Github asociado al MAU.")
+    st.markdown("**¿Cómo lo hicimos?**")
+    st.markdown("Co-diseño entre personas del grupo de trabajo “Sistematización y mapeo”. Para construcción se utilizó lenguaje de programación Python y otras herramientas de código abierto. Todo desde un repositorio en Github asociado al MAU.")
 
-#   st.markdown("**¿Para dónde vamos?**")
-#    st.markdown("En sintonía con los objetivos del MAU, con este prototipo se busca desarrollar un modelo confiable de sistematización y mapeo de las organizaciones, huertas y/o comunidades que son parte del MAU, con el fin de favorecer una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria.\n- Favorecer la sistematización y mapeo de redes de apoyo que potencien el intercambio de saberes, experiencias y recursos entre organizaciones y territorios urbanos, periurbanos y rurales.\n- Sistematizar y visibilizar avances en el objetivo de recuperar y regenerar los espacios para el aumento de la biodiversidad y el cultivo de alimentos saludables\n- Favorecer la visualización de avances y resultados de estrategias metodológicas empleadas para compartir saberes y experiencias en torno a la agroecología urbana, periurbana y rural")
-
+    st.markdown("**¿Para dónde vamos?**")
+    st.markdown("En sintonía con los objetivos del MAU, con este prototipo se busca desarrollar un modelo confiable de sistematización y mapeo de las organizaciones, huertas y/o comunidades que son parte del MAU, con el fin de favorecer una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria.\n- Favorecer la sistematización y mapeo de redes de apoyo que potencien el intercambio de saberes, experiencias y recursos entre organizaciones y territorios urbanos, periurbanos y rurales.\n- Sistematizar y visibilizar avances en el objetivo de recuperar y regenerar los espacios para el aumento de la biodiversidad y el cultivo de alimentos saludables\n- Favorecer la visualización de avances y resultados de estrategias metodológicas empleadas para compartir saberes y experiencias en torno a la agroecología urbana, periurbana y rural")
 
 #__________________________________________________________________________________________________________________________________________________________________
 st.header('🍃 Información General ✨') 
