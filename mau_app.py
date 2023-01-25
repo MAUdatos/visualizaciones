@@ -55,7 +55,7 @@ video_bytes = video_file.read()
 
 col1, col2, col3 = st.columns((0.5,0.2,0.5))
 col1.video(video_bytes)
-col3.markdown("[![Foo](https://raw.githubusercontent.com/MAUdatos/visualizaciones/e260dd4ac3c5513efcd8c02e52d12cccc4007872/descargaqui.jpeg)](https://github.com/MAUdatos/visualizaciones/raw/e260dd4ac3c5513efcd8c02e52d12cccc4007872/Disen%CC%83o_prototipo_Web_App_MAU_2023.pdf)")
+col3.markdown("[![Foo](https://raw.githubusercontent.com/MAUdatos/visualizaciones/d06b2da83b6a80f2cf26a682d3dd15c7b4b4bf54/descargaaqui_pequen%CC%83o.png)](https://github.com/MAUdatos/visualizaciones/raw/e260dd4ac3c5513efcd8c02e52d12cccc4007872/Disen%CC%83o_prototipo_Web_App_MAU_2023.pdf)")
 
 with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
