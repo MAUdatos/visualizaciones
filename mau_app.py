@@ -50,9 +50,9 @@ st.header('🌽 Mensaje de bienvenida ✨')
 #__________________________________________________________________________________________________________________________________________________________________
 #______
 
-video_file = open('https://youtube.com/shorts/Jtnyad76H0c?feature=share', 'rb')
-video_bytes = video_file.read()
-st.video(video_bytes)
+#video_file = open('https://youtube.com/shorts/Jtnyad76H0c?feature=share', 'rb')
+#video_bytes = video_file.read()
+st.video('https://youtube.com/shorts/Jtnyad76H0c?feature=share')
 
 
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True)
