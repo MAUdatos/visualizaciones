@@ -57,14 +57,14 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 #st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 
-col1, col2,col3= st.columns(3)
-            with col1:  
-                if st.button('Abrir Introducción',key='1'):            
-                    show_pdf('Diseño_prototipo_Web_App_MAU_2023.pdf')
-            with col2:
-                st.button('Cerrar Introudcción',key='2')                   
-            with col3:
-                with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
+col1, col2,col3 = st.columns(3)
+with col1:  
+            if st.button('Abrir Introducción',key='1'):
+                        show_pdf('Diseño_prototipo_Web_App_MAU_2023.pdf')
+with col2:
+            st.button('Cerrar Introudcción',key='2')                   
+with col3:
+          with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
                 st.download_button(label="Descargalo en PDF", key='3',
                         data=PDFbyte,
