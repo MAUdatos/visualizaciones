@@ -53,7 +53,7 @@ st.header('🌽 Mensaje de bienvenida ✨')
 video_file = open('video_intro_compress.mp4', 'rb')
 video_bytes = video_file.read()
 
-col1, col2, col3 = st.columns((0.5,0,2,0,5))
+col1, col2, col3 = st.columns((0.5,0.2,0.5))
 col1.video(video_bytes)
 col3.image("descargaqui.jpeg")
 
