@@ -50,9 +50,10 @@ st.header('🌽 Mensaje de bienvenida ✨')
 #__________________________________________________________________________________________________________________________________________________________________
 #______
 
-#video_file = open('https://youtube.com/shorts/Jtnyad76H0c?feature=share', 'rb')
-#video_bytes = video_file.read()
-st.video('https://www.youtube.com/shorts/Jtnyad76H0c')
+video_file = open('video_intro_compress.mp4', 'rb')
+video_bytes = video_file.read()
+
+st.video(video_bytes)
 
 with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
