@@ -62,7 +62,7 @@ def show_pdf(file_path):
     pdf_display = f'<iframe src="https://drive.google.com/file/d/1KzQHPjc8N-3K_vMmZvyKo8YkZDcVtPE2/view?usp=sharing;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-show_pdf('post1-compressed.pdf')
+#show_pdf('post1-compressed.pdf')
 
 
 with st.expander("Leer más detalles sobre el proceso de diseño y construcción de esta aplicación web"):
