@@ -57,11 +57,11 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 #st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 
-#st.markdown("Leer más detalles sobre el proceso de diseño y construcción de esta aplicación web")
-st.download_button(label="Para más infomración descarga la presentación de avances detallada de todos estos avances aquí", 
-#      data=PDFbyte,
-        file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
-        mime='application/octet-stream')
+
+st.download_button(label="Para más información descarga la presentación de detallada aquí", 
+      data=PDFbyte,
+      file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
+      mime='application/octet-stream')
 
 
 #with st.expander("Leer más detalles sobre el proceso de diseño y construcción de esta aplicación web"):
