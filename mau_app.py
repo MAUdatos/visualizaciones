@@ -59,7 +59,7 @@ col2.video(video_bytes)
 with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 
-st.download_button(label="Descarga la presentación de detallada aquí", 
+col2.download_button(label="Descarga la presentación de detallada aquí", 
       data=PDFbyte,
       file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
       mime='application/octet-stream')
