@@ -59,9 +59,10 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 
 with open(Diseño_prototipo_Web_App_MAU_2023.pdf,"rb") as f:
       base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-pdf_display = F'<embed src=”data:application/pdf;base64,{base64_pdf}” width=”700″ height=”1000″ type=”application/pdf”>’
+pdf_display = F'<embed src=”data:application/pdf;base64,{base64_pdf}” width=”700″ height=”1000″ type=”application/pdf”>'
 
 st.markdown(pdf_display, unsafe_allow_html=True)
+
 #show_pdf('Diseño_prototipo_Web_App_MAU_2023.pdf')
 
 
