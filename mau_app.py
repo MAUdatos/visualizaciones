@@ -54,16 +54,19 @@ video_file = open('video_intro_compress.mp4', 'rb')
 video_bytes = video_file.read()
 
 col1, col2, col3, col4 = st.columns((1,0.2,1,3))
+col1.markdown('Te invitamos a ver este video de bienvenida')
+col1.video(video_bytes)
+col3.markdown('¡Aquí el detalle de todo esto!')
 col1.video(video_bytes)
 col3.markdown("[![Foo](https://raw.githubusercontent.com/MAUdatos/visualizaciones/d06b2da83b6a80f2cf26a682d3dd15c7b4b4bf54/descargaaqui_pequen%CC%83o.png)](https://github.com/MAUdatos/visualizaciones/raw/e260dd4ac3c5513efcd8c02e52d12cccc4007872/Disen%CC%83o_prototipo_Web_App_MAU_2023.pdf)")
 
-with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
+#with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
+#    PDFbyte = pdf_file.read()
 
-st.download_button(label="Descarga la presentación de detallada aquí", 
-      data=PDFbyte,
-      file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
-      mime='application/octet-stream')
+#st.download_button(label="Descarga la presentación de detallada aquí", 
+#      data=PDFbyte,
+#      file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
+#      mime='application/octet-stream')
 
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">El Prototipo Web App 1.0 - MAU 2023 es el primer resultado del grupo de trabajo “Sistematización y Mapeo”. Con él se busca avanzar hacia un modelo confiable de sistematización y mapeo de las organizaciones, huertas y/o comunidades que son parte del MAU, con el fin de unir y potenciar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria.</div>', unsafe_allow_html=True)
