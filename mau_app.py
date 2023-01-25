@@ -46,7 +46,8 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 st.image("headermau2023.png")
 
 #__________________________________________________________________________________________________________________________________________________________________
-st.header('🌽 Mensaje de bienvenida ✨') 
+col1, col2, col3 = st.columns((1,1,1))
+col2.header('🌽 Mensaje de bienvenida ✨') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______
 
@@ -90,7 +91,8 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 
 
 #__________________________________________________________________________________________________________________________________________________________________
-st.header('🍃 Información General ✨') 
+col1, col2, col3 = st.columns((1,1,1))
+col2.header('🍃 Información General ✨') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______________________________
 st.subheader('Objetivos del MAU')
@@ -176,7 +178,8 @@ col5.map(df_geo)
 st.markdown("""---""")
 
 #________________________________________________________________________________________________________________________________________________________________
-st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022) ✨') 
+col1, col2, col3 = st.columns((1,1,1))
+col2.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022) ✨') 
 #________________________________________________________________________________________________________________________________________________________________
 
 df_bbdd_p = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante','Asistencia 1er Encuentro','Asistencia 2do Encuentro'])
@@ -262,7 +265,8 @@ with col3:
 st.markdown("""---""")
 
 #_________________________________________________________________
-st.subheader("🌽 Análisis de Sistematización y Mapeo ✨")
+col1, col2, col3 = st.columns((1,1,1))
+col2.subheader("🌽 Análisis de Sistematización y Mapeo ✨")
 #_________________________________________________________________
 st.markdown('Aquí podra conocer a las organizaciones, huertas y colectivos que forman la red del MAU. La información se organiza por territorios. ')
 #st.caption('')
@@ -316,7 +320,8 @@ else:
 
 st.markdown("""---""")
 #______________________________
-st.subheader('✨🌼 Formulario de retroalimentación 🐝✨')
+col1, col2, col3 = st.columns((1,1,1))
+col2.subheader('✨🌼 Formulario de Retroalimentación 🐝✨')
 #______________________________
 st.markdown("[Comparte tu visión y experiencia con esta Web App respondiendo al formulario de retroalimentación aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
 st.markdown('Las preguntas ahí ayudaran a :\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
