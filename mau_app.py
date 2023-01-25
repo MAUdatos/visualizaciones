@@ -53,8 +53,9 @@ st.header('🌽 Mensaje de bienvenida ✨')
 video_file = open('video_intro_compress.mp4', 'rb')
 video_bytes = video_file.read()
 
-col1, col2, col3 = st.columns((0.5,1,1))
+col1, col2, col3 = st.columns((0.5,0,2,0,5))
 col1.video(video_bytes)
+col3.image("descargaqui.jpeg")
 
 with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
