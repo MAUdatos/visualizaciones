@@ -49,6 +49,12 @@ st.image("headermau2023.png")
 st.header('🌽 Mensaje de bienvenida ✨') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______
+
+video_file = open('https://youtube.com/shorts/Jtnyad76H0c?feature=share', 'rb')
+video_bytes = video_file.read()
+st.video(video_bytes)
+
+
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">El Prototipo Web App 1.0 - MAU 2023 es el primer resultado del grupo de trabajo “Sistematización y Mapeo”. Con él se busca avanzar hacia un modelo confiable de sistematización y mapeo de las organizaciones, huertas y/o comunidades que son parte del MAU, con el fin de unir y potenciar una red de cooperación mutua que fomente, reivindique y defienda el oficio de la agroecología en pro de la soberanía alimentaria.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
