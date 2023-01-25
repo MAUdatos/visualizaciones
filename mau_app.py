@@ -60,9 +60,11 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 col1, col2,col3 = st.columns(3)
 with col1:  
     if st.button('Abrir Introducción',key='1'):
-    show_pdf('Diseño_prototipo_Web_App_MAU_2023.pdf')
+            show_pdf('Diseño_prototipo_Web_App_MAU_2023.pdf')
+
 with col2:
-   st.button('Cerrar Introudcción',key='2')                   
+   st.button('Cerrar Introudcción',key='2')    
+
 with col3:
    with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
    PDFbyte = pdf_file.read()
