@@ -5,6 +5,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import re
 import word_analysis as wa
+import base64
 
 #__________________________________________________________________________________________________________________________________________________________________
 # Dashboard structure
