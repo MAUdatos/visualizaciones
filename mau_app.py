@@ -57,7 +57,7 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 #st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 
-with open(Diseño_prototipo_Web_App_MAU_2023.pdf,"rb") as f:
+with open("Diseño_prototipo_Web_App_MAU_2023.pdf","rb") as f:
       base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 pdf_display = F'<embed src=”data:application/pdf;base64,{base64_pdf}” width=”700″ height=”1000″ type=”application/pdf”>'
 
