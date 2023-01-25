@@ -46,21 +46,20 @@ df_bbdd.rename(columns = {'Latitud': 'lat', 'Longitud':'lon',},  inplace = True)
 st.image("headermau2023.png")
 
 #__________________________________________________________________________________________________________________________________________________________________
-col1, col2, col3 = st.columns((0.5,2,0.5))
-col2.header('🌽 Mensaje de bienvenida ✨') 
+st.header('🌽 Mensaje de bienvenida ✨') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______
 
 video_file = open('video_intro_compress.mp4', 'rb')
 video_bytes = video_file.read()
 
-col1, col2, col3 = st.columns((1,1,1))
-col2.video(video_bytes)
+col1, col2, col3 = st.columns((0.5,1,1))
+col1.video(video_bytes)
 
 with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 
-col2.download_button(label="Descarga la presentación de detallada aquí", 
+st.download_button(label="Descarga la presentación de detallada aquí", 
       data=PDFbyte,
       file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
       mime='application/octet-stream')
@@ -91,8 +90,7 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 
 
 #__________________________________________________________________________________________________________________________________________________________________
-col1, col2, col3 = st.columns((1,1,1))
-col2.header('🍃 Información General ✨') 
+st.header('🍃 Información General ✨') 
 #__________________________________________________________________________________________________________________________________________________________________
 #______________________________
 st.subheader('Objetivos del MAU')
@@ -178,8 +176,8 @@ col5.map(df_geo)
 st.markdown("""---""")
 
 #________________________________________________________________________________________________________________________________________________________________
-col1, col2, col3 = st.columns((1,1,1))
-col2.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022) ✨') 
+
+st.header('🌻 Análisis Encuentros MAU (11/2022, 12/2022) ✨') 
 #________________________________________________________________________________________________________________________________________________________________
 
 df_bbdd_p = pd.DataFrame(df_bbdd,columns=['Region','Localidad','Organización_Huerta_Colectivo','Nombre_representante','Asistencia 1er Encuentro','Asistencia 2do Encuentro'])
@@ -265,8 +263,8 @@ with col3:
 st.markdown("""---""")
 
 #_________________________________________________________________
-col1, col2, col3 = st.columns((1,1,1))
-col2.subheader("🌽 Análisis de Sistematización y Mapeo ✨")
+
+st.subheader("🌽 Análisis de Sistematización y Mapeo ✨")
 #_________________________________________________________________
 st.markdown('Aquí podra conocer a las organizaciones, huertas y colectivos que forman la red del MAU. La información se organiza por territorios. ')
 #st.caption('')
@@ -320,8 +318,8 @@ else:
 
 st.markdown("""---""")
 #______________________________
-col1, col2, col3 = st.columns((1,1,1))
-col2.subheader('✨🌼 Formulario de Retroalimentación 🐝✨')
+
+st.subheader('✨🌼 Formulario de Retroalimentación 🐝✨')
 #______________________________
 st.markdown("[Comparte tu visión y experiencia con esta Web App respondiendo al formulario de retroalimentación aquí](https://forms.gle/fwULxu8f7kdrKDVFA)")
 st.markdown('Las preguntas ahí ayudaran a :\n- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023.\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023.\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU.')
