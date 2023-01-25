@@ -57,24 +57,33 @@ st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) 
 #st.markdown("- Explorar la experiencia de usuario con el Prototipo Web App 1.0 - MAU 2023\n- Caracterizar las diferentes visiones sobre el potencial de uso para una herramienta como el Prototipo Web App 1.0 - MAU 2023\n- Identificar potenciales contenidos a considerar en futuras etapas de sistematización y mapeo.\n- Identificar contenidos que deben considerarse dentro de la esfera pública del MAU y aquellos que sólo deban estar disponibles para la gestión interna del MAU")
 st.markdown('<div style="text-align: justify;"></div>', unsafe_allow_html=True) ##Espacio Texto
 
-#def show_pdf(file_path):
-#    with open(file_path,"rb") as f:
-#        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-#    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
-#    st.markdown(pdf_display, unsafe_allow_html=True)
-#show_pdf('Diseño_prototipo_Web_App_MAU_2023.pdf')
+col1, col2,col3= st.columns(3)
+            with col1:  
+                if st.button('Abrir Introducción',key='1'):            
+                    show_pdf('Diseño_prototipo_Web_App_MAU_2023.pdf')
+            with col2:
+                st.button('Cerrar Introudcción',key='2')                   
+            with col3:
+                with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
+                    PDFbyte = pdf_file.read()
+                st.download_button(label="Descargalo en PDF", key='3',
+                        data=PDFbyte,
+                        file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
+                        mime='application/octet-stream')
+            
 
-st.markdown("""
-    <embed src="https://github.com/MAUdatos/visualizaciones/blob/580b8540981fab928f8acd0f5c6745762b30016f/Disen%CC%83o_prototipo_Web_App_MAU_2023.pdf" width="800" height="800">
-    """, unsafe_allow_html=True)
 
-with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
+#st.markdown("""
+#    <embed src="https://github.com/MAUdatos/visualizaciones/blob/580b8540981fab928f8acd0f5c6745762b30016f/Disen%CC%83o_prototipo_Web_App_MAU_2023.pdf" width="800" height="800">
+#    """, unsafe_allow_html=True)#
 
-st.download_button(label="Descarga la presentación de avances", 
-        data=PDFbyte,
-        file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
-        mime='application/octet-stream')
+#with open("Diseño_prototipo_Web_App_MAU_2023.pdf", "rb") as pdf_file:
+#    PDFbyte = pdf_file.read()
+
+#st.download_button(label="Descarga la presentación de avances", 
+#        data=PDFbyte,
+#        file_name="Avances Sistematización y Mapeo MAU 2023.pdf",
+#        mime='application/octet-stream')
 
 
 with st.expander("Leer más detalles sobre el proceso de diseño y construcción de esta aplicación web"):
